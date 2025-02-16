@@ -239,3 +239,8 @@ SELECT OGRSEHIR,COUNT(*) AS 'Toplam' FROM TBLOGRENCILER GROUP BY OGRSEHIR
 GROUP BY ile kullanılan filtreleme koşuludur. WHERE gibi çalışır ama agregat fonksiyonlarla kullanılır.<br><br>
 TBLOGRENCILER tablosunda sadece 2 tane öğrencinin bulunduğu şehirleri getiren sorgu<br>
 SELECT OGRSEHIR,COUNT(*) AS 'SAYI' FROM TBLOGRENCILER GROUP BY OGRSEHIR HAVING COUNT(*)=2<br><br>
+
+## ✅ 8. LIKE
+Metinsel ifadeleri belirli bir desene göre arar. % ve _ karakterleri joker olarak kullanılır.<br><br>
+TBLOGRENCILER tablosunda öğrencilerin adının içerisinde A harfi olanları getiren sorgu<br>
+SELECT * FROM TBLOGRENCILER WHERE OGRAD LIKE '%a%'<br><br>
