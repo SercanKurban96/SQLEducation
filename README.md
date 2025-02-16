@@ -229,3 +229,8 @@ SELECT MAX(SINAV1),MAX(SINAV2),MAX(SINAV3) FROM TBLNOTLAR<br><br>
 ## ✅ 5. AVG()
 Belirtilen sütundaki sayıların ortalamasını hesaplar.<br>
 SELECT AVG(SINAV1),AVG(SINAV2),AVG(SINAV3) FROM TBLNOTLAR<br><br>
+
+## ✅ 6. GROUP BY
+Belirli bir sütuna göre gruplama yapar ve genellikle agregat fonksiyonlarla (SUM, COUNT, AVG vb.) kullanılır.<br><br>
+📍TBLOGRENCILER tablosunda şehir sayısına göre gruplandırma yapan sorgu<br>
+SELECT OGRSEHIR,COUNT(*) AS 'Toplam' FROM TBLOGRENCILER GROUP BY OGRSEHIR
