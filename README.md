@@ -237,12 +237,12 @@ SELECT OGRSEHIR,COUNT(*) AS 'Toplam' FROM TBLOGRENCILER GROUP BY OGRSEHIR
 
 ## ✅ 7. HAVING
 GROUP BY ile kullanılan filtreleme koşuludur. WHERE gibi çalışır ama agregat fonksiyonlarla kullanılır.<br><br>
-TBLOGRENCILER tablosunda sadece 2 tane öğrencinin bulunduğu şehirleri getiren sorgu<br>
+📍 TBLOGRENCILER tablosunda sadece 2 tane öğrencinin bulunduğu şehirleri getiren sorgu<br>
 SELECT OGRSEHIR,COUNT(*) AS 'SAYI' FROM TBLOGRENCILER GROUP BY OGRSEHIR HAVING COUNT(*)=2<br><br>
 
 ## ✅ 8. LIKE
 Metinsel ifadeleri belirli bir desene göre arar. % ve _ karakterleri joker olarak kullanılır.<br><br>
-TBLOGRENCILER tablosunda öğrencilerin adının içerisinde A harfi olanları getiren sorgu<br>
+📍 TBLOGRENCILER tablosunda öğrencilerin adının içerisinde A harfi olanları getiren sorgu<br>
 SELECT * FROM TBLOGRENCILER WHERE OGRAD LIKE '%a%'<br><br>
 
 ## ✅ 9. DISTINCT
@@ -251,5 +251,15 @@ SELECT DISTINCT OGRSEHIR FROM TBLOGRENCILER<br><br>
 
 ## ✅ 10. ORDER BY
 Sonuçları belirli bir sütuna göre sıralar.<br><br>
-TBLOGRENCILER tablosunda öğrencilerin adını alfabetik sıraya göre A-Z gösteren sorgu<br>
+📍 TBLOGRENCILER tablosunda öğrencilerin adını alfabetik sıraya göre A-Z gösteren sorgu<br>
 SELECT * FROM TBLOGRENCILER ORDER BY OGRAD ASC<br><br>
+
+## ✅ 11. TOP
+Sorgu sonucundan belirli bir sayıda satır getirir (SQL Server için).<br><br>
+📍 TBLOGRENCILER tablosunda üstten 3 kaydı getiren sorgu<br>
+SELECT TOP 3 * FROM TBLOGRENCILER<br><br>
+
+## ✅ 12. PERCENT
+Belirli bir yüzdelik dilimdeki verileri getirir (SQL Server için).<br><br>
+📍 TBLOGRENCILER tablosunda bulunan kayıtların yüzde 60'ını getiren sorgu<br>
+SELECT TOP 60 PERCENT * FROM TBLOGRENCILER<br><br>
