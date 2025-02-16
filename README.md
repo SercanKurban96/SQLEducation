@@ -263,3 +263,14 @@ SELECT TOP 3 * FROM TBLOGRENCILER<br><br>
 Belirli bir yüzdelik dilimdeki verileri getirir (SQL Server için).<br><br>
 📍 TBLOGRENCILER tablosunda bulunan kayıtların yüzde 60'ını getiren sorgu<br>
 SELECT TOP 60 PERCENT * FROM TBLOGRENCILER<br><br>
+
+## ✅ 13. IN
+Belirtilen değerler kümesinde olanları getirir.<br><br>
+📍 TBLOGRENCILER tablosunda yer alan şehirlerden İzmir, Ankara veya Edirne olanları getiren sorgu<br>
+SELECT * FROM TBLOGRENCILER WHERE OGRSEHIR IN('İzmir','Ankara','Edirne')<br><br>
+
+## ✅ 14. NOT IN
+Belirtilen değerler kümesinde olmayanları getirir.<br><br>
+📍 TBLNOTLAR tablosunda yer alan SINAV1 değerlerden 70,75,80,85,90 değerlerini getirmeyen sorgu<br>
+SELECT * FROM TBLNOTLAR WHERE SINAV1 NOT IN(70,75,80,85,90)<br><br>
+
