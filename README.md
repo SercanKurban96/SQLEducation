@@ -232,5 +232,10 @@ SELECT AVG(SINAV1),AVG(SINAV2),AVG(SINAV3) FROM TBLNOTLAR<br><br>
 
 ## ✅ 6. GROUP BY
 Belirli bir sütuna göre gruplama yapar ve genellikle agregat fonksiyonlarla (SUM, COUNT, AVG vb.) kullanılır.<br><br>
-📍TBLOGRENCILER tablosunda şehir sayısına göre gruplandırma yapan sorgu<br>
+📍 TBLOGRENCILER tablosunda şehir sayısına göre gruplandırma yapan sorgu<br>
 SELECT OGRSEHIR,COUNT(*) AS 'Toplam' FROM TBLOGRENCILER GROUP BY OGRSEHIR
+
+## ✅ 7. HAVING
+GROUP BY ile kullanılan filtreleme koşuludur. WHERE gibi çalışır ama agregat fonksiyonlarla kullanılır.<br><br>
+TBLOGRENCILER tablosunda sadece 2 tane öğrencinin bulunduğu şehirleri getiren sorgu<br>
+SELECT OGRSEHIR,COUNT(*) AS 'SAYI' FROM TBLOGRENCILER GROUP BY OGRSEHIR HAVING COUNT(*)=2<br><br>
