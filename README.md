@@ -195,6 +195,7 @@ DELETE FROM TabloAdı WHERE Sütun<br><br>
 📍 TBLDERSLER tablosunda ID'ye göre şartlı silme işlemi şu şekildedir;<br>
 DELETE FROM TBLDERSLER WHERE DERSID=1<br><br>
 
-
-
+‼️ TRUNCATE KOMUTU<br><br>
+TRUNCATE komutu tablonun içerisindeki bütün verileri siler ve yeni bir veri eklediğimiz zaman ID değerini tekrar 1'den başlatır. Bir çeşit format gibi düşünebilirsiniz.<br>
+TRUNCATE TABLE TabloAdı<br><br>
 
