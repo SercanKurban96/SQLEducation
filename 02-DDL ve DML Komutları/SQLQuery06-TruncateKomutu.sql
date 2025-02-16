@@ -1,0 +1,2 @@
+--Tabloda yer alan bütün verileri silme
+--TRUNCATE TABLE TBLDERSLER
