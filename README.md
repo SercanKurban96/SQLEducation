@@ -199,3 +199,7 @@ DELETE FROM TBLDERSLER WHERE DERSID=1<br><br>
 TRUNCATE komutu tablonun içerisindeki bütün verileri siler ve yeni bir veri eklediğimiz zaman ID değerini tekrar 1'den başlatır. Bir çeşit format gibi düşünebilirsiniz.<br>
 TRUNCATE TABLE TabloAdı<br><br>
 
+✅ DML komutlarından UPDATE ile devam edelim.<br><br>
+‼️ <b>DİKKAT! Eğer sadece UPDATE TabloAdı SET Sütun=YeniDeğer yazarsanız, herhangi bir şart belirlenmezse o tabloya ait bütün verileri günceller!</b><br><br>
+📍 TBLOGRENCILER tablosunda ID'ye göre şartlı güncelleme işlemi şu şekildedir;<br>
+UPDATE TBLOGRENCILER SET OGRCINSIYET='Kız' WHERE OGRID=2<br><br>
