@@ -171,3 +171,6 @@ SELECT OGRAD,OGRSOYAD FROM OGRENCILER<br><br>
 
 📍 Eğer şartlı seçim uygularsak, örneğin; TBLOGRENCILER tablosundaki Ali ismindeki öğrencileri listeleyeceksek;<br>
 SELECT * FROM TBLOGRENCILER WHERE OGRAD='Ali'<br><br>
+
+![image](https://github.com/user-attachments/assets/a724623a-bfc6-496e-b222-d01cfbf08e80)<br><br>
+Oluşturduğumuz yeni tablonun ismi TBLNOTLAR olacaktır.<br><br>
