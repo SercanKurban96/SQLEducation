@@ -160,7 +160,7 @@ ADD KONTENJAN smallint<br><br>
 ALTER TABLE TBLDERSLER<br>
 DROP COLUMN KONTENJAN<br><br>
 
-📍 DML komutlarından SELECT ile başlayalım.<br><br>
+✅ DML komutlarından SELECT ile başlayalım.<br><br>
 SELECT * FROM TBLOGRENCILER<br><br>
 Burada SELECT kısmı verilerin sorgulanacağı anlamına gelmektedir. Burada * işareti ise sütunların tümünün seçileceği anlamına gelir. Burada TBLOGRENCILER tablosuna ait bütün verileri listelemek istiyoruz.<br><br>
 ![image](https://github.com/user-attachments/assets/2d818ed9-4ce0-4367-b0b2-44b86fee847e)<br><br>
@@ -174,3 +174,17 @@ SELECT * FROM TBLOGRENCILER WHERE OGRAD='Ali'<br><br>
 
 ![image](https://github.com/user-attachments/assets/a724623a-bfc6-496e-b222-d01cfbf08e80)<br><br>
 Oluşturduğumuz yeni tablonun ismi TBLNOTLAR olacaktır.<br><br>
+
+✅ DML komutlarından INSERT ile devam edelim.<br><br>
+📍 Kullanımı şu şekildedir;<br>
+INSERT INTO TabloAdı (Sütun1,Sütun2,Sütun3...) VALUES (Değer1,Değer2,Değer3...)<br><br>
+
+Örnek veri girişi;<br>
+INSERT INTO TBLOGRENCILER (OGRAD,OGRSOYAD,OGRSEHIR) VALUES ('Sercan','Kurban','İstanbul')<br><br>
+![image](https://github.com/user-attachments/assets/50fce404-5e0c-4209-a055-b4e81433f053)<br><br>
+Veri girişinde herhangi bir sıkıntı çıkmazsa karşımıza bu şekilde bir mesaj verecektir. Tekrardan SELECT * FROM TBLOGRENCILER sorgusunu yazıyoruz.<br><br>
+![image](https://github.com/user-attachments/assets/84e0f3a6-e28a-4d23-9bb1-be9e2b63ba37)<br><br>
+Gördüğünüz üzere cinsiyet ve kulüp bölümünde herhangi bir veri girmediğimiz için bize NULL değeri dönderdi.<br><br>
+
+
+
