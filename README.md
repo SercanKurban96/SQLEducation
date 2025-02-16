@@ -244,3 +244,8 @@ SELECT OGRSEHIR,COUNT(*) AS 'SAYI' FROM TBLOGRENCILER GROUP BY OGRSEHIR HAVING C
 Metinsel ifadeleri belirli bir desene göre arar. % ve _ karakterleri joker olarak kullanılır.<br><br>
 TBLOGRENCILER tablosunda öğrencilerin adının içerisinde A harfi olanları getiren sorgu<br>
 SELECT * FROM TBLOGRENCILER WHERE OGRAD LIKE '%a%'<br><br>
+
+## ✅ 9. DISTINCT
+Tekrar eden değerleri kaldırarak benzersiz kayıtları döndürür.<br>
+SELECT DISTINCT OGRSEHIR FROM TBLOGRENCILER<br><br>
+
