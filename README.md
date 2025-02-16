@@ -203,3 +203,29 @@ TRUNCATE TABLE TabloAdı<br><br>
 ‼️ <b>DİKKAT! Eğer sadece UPDATE TabloAdı SET Sütun=YeniDeğer yazarsanız, herhangi bir şart belirlenmezse o tabloya ait bütün verileri günceller!</b><br><br>
 📍 TBLOGRENCILER tablosunda ID'ye göre şartlı güncelleme işlemi şu şekildedir;<br>
 UPDATE TBLOGRENCILER SET OGRCINSIYET='Kız' WHERE OGRID=2<br><br>
+
+<hr>
+
+# 🖥️ Bölüm 3 - Gruplandırmalar ve Operatörler
+Bu bölümde;<br><br>
+SUM, COUNT, MIN, MAX, AVG, GROUP BY, HAVING, LIKE, DISTINCT, ORDER BY, LIKE, TOP, PERCENT, IN, NOT IN ve BETWEEN konularına yer verilmiştir.<br><br>
+
+## ✅ 1. SUM()
+Belirtilen sütundaki sayısal değerlerin toplamını hesaplar.<br>
+SELECT SUM(SINAV1) FROM TBLNOTLAR<br><br>
+
+## ✅ 2. COUNT()
+Kaç tane satır olduğunu sayar.<br>
+SELECT COUNT(*) FROM TBLOGRENCILER<br><br>
+
+## ✅ 3. MIN()
+Belirtilen sütundaki en küçük değeri döndürür.<br>
+SELECT MIN(SINAV1),MIN(SINAV2),MIN(SINAV3) FROM TBLNOTLAR<br><br>
+
+## ✅ 4. MAX()
+Belirtilen sütundaki en büyük değeri döndürür.<br>
+SELECT MAX(SINAV1),MAX(SINAV2),MAX(SINAV3) FROM TBLNOTLAR<br><br>
+
+## ✅ 5. AVG()
+Belirtilen sütundaki sayıların ortalamasını hesaplar.<br>
+SELECT AVG(SINAV1),AVG(SINAV2),AVG(SINAV3) FROM TBLNOTLAR<br><br>
