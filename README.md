@@ -118,10 +118,46 @@ Sol tarafta yer alan SQL Server Object Explorer kısmına tıkladıktan sonra k�
 ![image](https://github.com/user-attachments/assets/6713dcfa-a63b-4420-873f-b5a2d9ef0be5)<br><br>
 İlk verimizi eklemiş olduk. Verileri sıra sıra eklemek için direkt TAB tuşuna basabilirsiniz. Veri ekleme sırasında aşağıya indiğimiz an veri otomatik olarak kaydedilecektir.<br><br>
 
+<hr>
 
+# 🖥️ Bölüm 2 - DDL ve DML Komutları
+SQL'de DML (Data Manipulation Language) ve DDL (Data Definition Language) komutları, veritabanı yönetimi açısından farklı amaçlarla kullanılır.<br><br>
 
+## 📌 1. DML (Data Manipulation Language) - Veri Manipülasyon Dili
+DML komutları, veritabanındaki verilere ekleme, güncelleme, silme ve sorgulama işlemleri yapmamızı sağlar.<br><br>
+### ✅ Temel DML Komutları:
+![image](https://github.com/user-attachments/assets/721ece73-284c-4c6b-966d-e6926a97e110)<br><br>
+## 📌 2. DDL (Data Definition Language) - Veri Tanımlama Dili
+DDL komutları, veritabanındaki tabloları ve diğer yapıları oluşturmak, değiştirmek ve silmek için kullanılır.<br><br>
+### ✅ Temel DDL Komutları:
+![image](https://github.com/user-attachments/assets/fafde734-8473-4241-b8c9-0348d1879db8)<br><br>
+###  DML vs. DDL Karşılaştırması
+![image](https://github.com/user-attachments/assets/09911ce5-63ad-4764-af6f-98d7b3364e8b)<br><br>
+DML, veri üzerinde işlem yaparken, DDL ise verinin nasıl saklandığını belirler.<br>
+Bir SQL projesinde her iki tür de aktif olarak kullanılır. DDL ile veri yapısını oluşturup yönetirken, DML ile veriler üzerinde işlemler gerçekleştiririz.<br><br>
 
+![image](https://github.com/user-attachments/assets/bd08b308-9d17-4dc7-a022-dbf111464add)<br><br>
+SQL üzerinden yeni bir sorgu oluşturmak için yukarıda yer alan New Query sekmesine tıklıyoruz.<br><br>
+![image](https://github.com/user-attachments/assets/6ace4451-0a7a-4256-929e-b166bd32ee89)<br><br>
+Karşımıza boş bir sorgu gelmektedir. Sol üst köşede işaretlediğim alan eğer veri tabanınız burada çıkmazsa buradaki sekmeye tıklayarak ilgili veri tabanınızı seçmeniz gerekmektedir.<br><br>
 
+Şimdi bir tane tablo oluşturalım.<br><br>
+CREATE TABLE TBLDERSLER<br>
+(<br>
+DERSID tinyint,<br>
+DERSAD varchar(20)<br>
+)<br><br>
+Tablomuzu bu şekilde oluşturduktan sonra F5 tuşuna basıyoruz.<br><br>
+![image](https://github.com/user-attachments/assets/99da835d-656d-4c8e-9559-40ec7f345a86)<br><br>
+Sorguyu çalıştırdıktan sonra herhangi bir hata yoksa aşağıda yer alan "Commands completed successfully" adında bir mesaj gelecektir.<br><br>
+💯 Yorum satırına almak için -- işareti kullanılır.<br><br>
 
+TBLDERSLER tablosuna yeni bir sütun eklemek için;<br><br>
+ALTER TABLE TBLDERSLER<br>
+ADD KONTENJAN smallint<br><br>
+
+TBLDERSLER tablosundan sütun silmek için;<br><br>
+ALTER TABLE TBLDERSLER<br>
+DROP COLUMN KONTENJAN<br><br>
 
 
