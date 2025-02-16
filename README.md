@@ -249,3 +249,7 @@ SELECT * FROM TBLOGRENCILER WHERE OGRAD LIKE '%a%'<br><br>
 Tekrar eden değerleri kaldırarak benzersiz kayıtları döndürür.<br>
 SELECT DISTINCT OGRSEHIR FROM TBLOGRENCILER<br><br>
 
+## ✅ 10. ORDER BY
+Sonuçları belirli bir sütuna göre sıralar.<br><br>
+TBLOGRENCILER tablosunda öğrencilerin adını alfabetik sıraya göre A-Z gösteren sorgu<br>
+SELECT * FROM TBLOGRENCILER ORDER BY OGRAD ASC<br><br>
