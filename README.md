@@ -274,3 +274,9 @@ Belirtilen değerler kümesinde olmayanları getirir.<br><br>
 📍 TBLNOTLAR tablosunda yer alan SINAV1 değerlerden 70,75,80,85,90 değerlerini getirmeyen sorgu<br>
 SELECT * FROM TBLNOTLAR WHERE SINAV1 NOT IN(70,75,80,85,90)<br><br>
 
+## ✅ 15. BETWEEN
+Belirli bir aralıkta olan değerleri getirir.<br><br>
+📍 TBLNOTLAR tablosunda yer alan ortalamaların 74 ile 100 arasında olanları getiren sorgu<br>
+SELECT * FROM TBLNOTLAR WHERE ORTALAMA BETWEEN 74 AND 100<br><br>
+
+<hr>
