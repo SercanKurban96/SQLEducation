@@ -186,5 +186,15 @@ Veri girişinde herhangi bir sıkıntı çıkmazsa karşımıza bu şekilde bir 
 ![image](https://github.com/user-attachments/assets/84e0f3a6-e28a-4d23-9bb1-be9e2b63ba37)<br><br>
 Gördüğünüz üzere cinsiyet ve kulüp bölümünde herhangi bir veri girmediğimiz için bize NULL değeri dönderdi.<br><br>
 
+✅ DML komutlarından DELETE ile devam edelim.<br><br>
+📍 Kullanımı şu şekildedir;<br>
+DELETE FROM TabloAdı WHERE Sütun<br><br>
+
+‼️ <b>DİKKAT! Eğer sadece DELETE FROM TabloAdı yazarsanız, herhangi bir şart belirlenmezse o tabloya ait bütün verileri siler!</b><br><br>
+
+📍 TBLDERSLER tablosunda ID'ye göre şartlı silme işlemi şu şekildedir;<br>
+DELETE FROM TBLDERSLER WHERE DERSID=1<br><br>
+
+
 
 
