@@ -160,4 +160,14 @@ TBLDERSLER tablosundan sütun silmek için;<br><br>
 ALTER TABLE TBLDERSLER<br>
 DROP COLUMN KONTENJAN<br><br>
 
+DML komutlarından SELECT ile başlayalım.<br><br>
+SELECT * FROM TBLOGRENCILER<br><br>
+Burada SELECT kısmı verilerin sorgulanacağı anlamına gelmektedir. Burada * işareti ise sütunların tümünün seçileceği anlamına gelir. Burada TBLOGRENCILER tablosuna ait bütün verileri listelemek istiyoruz.<br><br>
+![image](https://github.com/user-attachments/assets/2d818ed9-4ce0-4367-b0b2-44b86fee847e)<br><br>
+Sorguyu çalıştırdığımız zaman karşımıza bu şekilde çıkacaktır.<br>
 
+Eğer sadece ad ve soyad seçeceksek<br>
+SELECT OGRAD,OGRSOYAD FROM OGRENCILER<br><br>
+
+Eğer şartlı seçim uygularsak, örneğin; TBLOGRENCILER tablosundaki Ali ismindeki öğrencileri listeleyeceksek;<br>
+SELECT * FROM TBLOGRENCILER WHERE OGRAD='Ali'<br><br>
