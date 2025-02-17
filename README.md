@@ -304,4 +304,88 @@ Oluşturacağımız tablonun ismini TBLKULUPLER olarak belirledik. Burada 2 tane
 ![image](https://github.com/user-attachments/assets/739e01a9-26fd-49c0-a593-4ea58b4354c7)<br>
 TBLKULUPLER tablosuna ait veri girişlerimizi yaptık.<br><br>
 
+![image](https://github.com/user-attachments/assets/f8bc6186-6449-4afd-b8ff-9047ec43b87e)<br><br>
+Buradaki tüm kulüplerin değerini sayı olarak belirledik, çünkü TBLKULUPLER tablosunda yer alan değerlere karşılık TBLOGRENCILER tablosunda yer alan OGRKULUP ile birleştirme işlemi uygulayacağız.<br><br>
+![image](https://github.com/user-attachments/assets/ff1f83f3-815f-48bd-84c9-acde66934f56)<br>
+Burada gördüğünüz gibi OGRKULUP sütununda yer alan değerler artık sayı ile belirlendi. Bunun için TBLOGRENCILER tablosuna gelip OGRKULUP sütununda yer alan veri tipini değiştiriyoruz.<br><br>
+![image](https://github.com/user-attachments/assets/3e9eb241-ab56-41ee-b0e6-42ea653ea7ee)<br>
+‼️ Buranın veri tipi önceden varchar(50) iken şimdi tinyint olarak belirledik, çünkü TBLKULUPLER tablosunda yer alan KULUPID sütunun veri tipi tinyint olduğu için burada da <ins>tinyint yapmamız gerekmektedir</ins>, aksi takdirde hata verecektir.<br><br>
+
+‼️ <strong>DİKKAT! Herhangi iki tablo arasında ilişki kurabilmek için o tabloların birer <ins>"Birincil Anahtar (Primary Key)"</ins>'ı olması gerekir. Bunun için yapmamız gereken adım;</strong><br><br>
+
+![image](https://github.com/user-attachments/assets/2b212983-a904-4feb-9bc6-250dc2a60346)<br>
+TBLKULUPLER tablosuna gidip KULUPID sütununa sağ tıklayıp <strong><ins>"Set Primary Key"</ins></strong> diyoruz.<br>
+Aynısını bu kez TBLOGRENCILER tablosuna gidip OGRID sütununa sağ tıklayıp <strong><ins>"Set Primary Key"</ins></strong> diyoruz.<br><br>
+
+✅ Artık ilişkisel diyagram oluşturabiliriz. Bunun için yapılması gereken adımlar;<br><br>
+![image](https://github.com/user-attachments/assets/87e4b9c3-5cb3-4095-89e3-b263412b452a)<br>
+İlgili veri tabanına ait olan Database Diagrams klasörüne sağ tıklayıp <strong><ins>New Database Diagram</ins></strong> diyoruz.<br>
+![image](https://github.com/user-attachments/assets/e29a5049-a677-4a47-8716-0d939d295272)<br>
+Çıkan uyarıya Yes diyoruz.<br>
+![image](https://github.com/user-attachments/assets/60007e29-d3c8-41cf-a751-5cd365914d78)<br>
+Gördüğünüz gibi tablolar karşımıza çıkmaktadır. Bunun için üzerinde yapacağımız ilişkili tablolar hangisiyse onları seçiyoruz (veya hepsini seçebilirsiniz).<br>
+📍 Biz burada TBLOGRENCILER ve TBLKULUPLER tablosunu alıyor olacağız. Bunun için bu iki tabloya gelip Add diyoruz. Tabloları seçtikten sonra Close diyoruz.<br>
+📍 Bu tabloları seçmemizin sebebi TBLOGRENCILER tablosunda yer alan OGRKULUP ile TBLKULUPLER tablosunda yer alan KULUPID ile ilişkilendiriyor olacağız.<br><br>
+![image](https://github.com/user-attachments/assets/ee47aaa8-9317-41f1-9fcc-658b382fb515)<br>
+📍 Diyagramımızı bu şekilde oluşturduk. Şimdi bunları ilişkilendiriyor olacağız.<br>
+📍 TBLKULUPLER tablosunda yer alan KULUPID sütununa basılı tutup TBLOGRENCILER tablosunda yer alan OGRKULUP sütununa sürüklüyoruz.<br>
+![image](https://github.com/user-attachments/assets/0ec021de-ca97-4f6d-9bec-3921e55c83a8)<br>
+📍 Çıkan ekrana OK diyoruz.<br>
+![image](https://github.com/user-attachments/assets/0bffc53a-312e-430f-b925-95bc46519e09)<br>
+📍 Çıkan ekrana bir kez daha OK diyoruz.<br>
+![image](https://github.com/user-attachments/assets/cb1ecc3c-6a22-4c2b-a02c-56e3029b09a1)<br>
+📍 Gördüğünüz üzere KULUPID ile OGRKULUP arasında bire çok ilişki sağlandı. Diyagramı kaydediyoruz.<br>
+![image](https://github.com/user-attachments/assets/32fd974d-0eba-45cc-b398-34efc4de25ac)<br>
+📍 Diyagramın ismi bu şekilde kalabilir veya değiştirebilirsiniz. Diagram_0 isminde kaydediyoruz.<br><br>
+
+‼️ TBLOGRENCILER tablosuna yeni bir öğrenci ekleyelim. Kulüpler tablosunda 5 tane kulübümüz vardı, bunlar ID'ye göre sıralı halde gelmekteydi. Ancak biz OGRKULUP değerini 6 yaptığımız zaman ne olacak bakalım.<br><br>
+![image](https://github.com/user-attachments/assets/9d584eaa-cf86-4266-946c-cff7dc394628)<br>
+💯 Buradaki hata, TBLKULUPLER tablosunda ID değerleri sırasıyla 5 tane olmasına rağmen, biz burada OGRKULUP sütununa 6 diye girdiğimiz zaman, o değer olmadığı için bize direkt hata döndürdü.<br><br>
+
+✅ TBLKULUPLER ile TBLOGRENCILER arasındaki ilişki oluşturuldu. Şimdi yeni bir ilişki oluşturmak için yapmamız gereken adımlar;<br><br>
+
+![image](https://github.com/user-attachments/assets/f27ce0db-4483-4a64-8300-b3c8167ab9e4)<br>
+Diyagramın herhangi bir alanına sağ tıklayarak Add Table diyoruz ve kalan tablolarımızı ekliyoruz..<br>
+Burada yapacağımız ilişki TBLDERSLER tablosunda yer alan DERSID ile TBLNOTLAR tablosunda yer alan DERS sütunuyla bire çok ilişki kuracağız. Bunların da ID değerler Birincil Anahtar olmadığı için bunlara da Birincil Anahtar değerlerini verelim.<br><br>
+
+![image](https://github.com/user-attachments/assets/f5232fc5-7709-4b02-8fc8-e74f9a5c8b31)<br>
+Burada da aynı şekilde DERSID sütununa sağ tıklayarak Set Primary Key verebiliriz. Aynısını TBLNOTLAR içerisinde yer alan NOTID sütununa da Birincil Anahtar verelim ve ilişkili diyagramımızı oluşturalım.<br><br>
+<b>Oluşturulacak İlişkili Diyagramlar;</b><br>
+✅ TBLOGRENCILER tablosunda yer alan OGRID ile TBLNOTLAR tablosunda yer alan OGRENCI sütunu bire çok ilişkilidir.<br>
+✅ TBLDERSLER tablosunda yer alan DERSID ile TBLNOTLAR tablosunda yer alan DERS sütunu bire çok ilişkilidir.<br><br>
+
+![image](https://github.com/user-attachments/assets/b2b11a12-936e-4523-848e-cbff2c2d3518)<br>
+Diyagramlarımızı tamamladıktan sonra kaydediyoruz, ancak buradaki diyagramlar dağınık halde görünmektedir. Diyagramları toparlamak için herhangi alana sağ tıklayıp <b>"Arrange Tables"</b> diyoruz.<br>
+![image](https://github.com/user-attachments/assets/687a56cb-4f0b-4db8-977a-d5985ef0fc66)<br>
+Diyagramımız artık düzenli hale gelecektir. Tekrardan kaydediyoruz.<br>
+
+## 📌 2. JOIN (Birleştirme İşlemi)
+Tablolar arasında ilişkili verileri çekmek için JOIN kullanılır.<br><br>
+### JOIN Türleri
+![image](https://github.com/user-attachments/assets/ba85e696-0e7a-493d-8e1d-87d5fea5dbf1)<br>
+
+Burada birleştirme işlemlerinden INNER JOIN komutunu kullanacağız.<br><br>
+📍 Örnek: TBLNOTLAR VE TBLDERSLER tablolarında yer alan NOTID değerine göre DERSAD sütununda yer alan derslerin adını getiren sorgu<br><br>
+SELECT NOTID,DERSAD FROM TBLNOTLAR<br>
+INNER JOIN TBLDERSLER<br>
+ON TBLNOTLAR.DERS = TBLDERSLER.DERSID<br>
+Burada ilk olarak TBLNOTLAR tablosunda yer alan NOTID ile TBLDERSLER tablosunda yer alan DERSAD sütunlarını ekranda göstermeye çalışacağız, ancak yazacağımız sorgu ilk başta hata verecektir. Bunun için yapmamız gereken birleştirme komutu INNER JOIN komutudur. INNER JOIN dedikten sonra birleştirmemiz gereken tablo hangisiyse onu yazıyoruz. Burada birleştireceğimiz tablo TBLDERSLER tablosudur. Daha sonra ON diyoruz, ardından TBLNOTLAR tablosunda yer alan DERS sütunu ile TBLDERSLER tablosunda yer alan DERSID sütunlarını ekleyerek birleştirme işlemini tamamlıyoruz.<br>
+![image](https://github.com/user-attachments/assets/092497d9-89a2-44ed-8271-a17671335845)<br>
+Ekran çıktısı bu şekilde olacaktır. Dilerseniz TBLNOTLAR tablosunda yer alan SINAV1,SINAV2,SINAV3,ORTALAMA,DURUM gibi sütunları da getirebilirsiniz.<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
