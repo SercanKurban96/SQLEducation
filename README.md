@@ -373,10 +373,17 @@ Burada ilk olarak TBLNOTLAR tablosunda yer alan NOTID ile TBLDERSLER tablosunda 
 ![image](https://github.com/user-attachments/assets/092497d9-89a2-44ed-8271-a17671335845)<br>
 Ekran çıktısı bu şekilde olacaktır. Dilerseniz TBLNOTLAR tablosunda yer alan SINAV1,SINAV2,SINAV3,ORTALAMA,DURUM gibi sütunları da getirebilirsiniz.<br><br>
 
+## 📌 3. Alt Sorgular (Subquery)
+Bir SQL sorgusu içinde başka bir SQL sorgusu kullanmaktır. WHERE, SELECT, FROM ve HAVING gibi ifadelerde kullanılabilir.<br><br>
+📍 Örnek: TBLDERSLER tablosunda yer alan ismi 'Matematik' olan derse ait not bilgilerini görüntüleme<br><br>
+SELECT * FROM TBLNOTLAR WHERE DERS=(SELECT DERSID FROM TBLDERSLER WHERE DERSAD='Matematik')<br>
 
+### 📌 Özet
+✅ İlişkili tablolar sayesinde veri tekrarını önleriz.<br>
+✅ JOIN işlemi ile ilişkili verileri birleştirerek raporlar oluşturabiliriz.<br>
+✅ Alt sorgular (Subquery) ile daha karmaşık sorgular yazabiliriz.<br><br>
 
-
-
+<hr>
 
 
 
