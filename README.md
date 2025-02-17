@@ -280,3 +280,28 @@ Belirli bir aralıkta olan değerleri getirir.<br><br>
 SELECT * FROM TBLNOTLAR WHERE ORTALAMA BETWEEN 74 AND 100<br><br>
 
 <hr>
+
+# 🖥️ Bölüm 4 - İlişkili Tablolar ve Alt Sorgular
+SQL'de ilişkili tablolar, birleştirme işlemleri (JOIN) ve alt sorgular (subquery) veritabanı yönetiminde oldukça önemli konulardır. Bunları detaylı şekilde açıklayalım:<br><br>
+
+## 📌 1. İlişkili Tablolar
+Veritabanında tablolar genellikle birbiriyle ilişkili olur. En yaygın ilişki türleri şunlardır:<br><br>
+
+✅ <b>1. Bire Bir (One-to-One) →</b> Her iki tabloda da benzersiz bir şekilde eşleşen kayıtlar vardır.<br>
+✅ <b>2. Bire Çok (One-to-Many) →</b> Bir tabloda bir kayıt, diğer tabloda birden çok kayıtla eşleşir.<br>
+✅ <b>3. Çoka Çok (Many-to-Many) →</b> İki tablo arasında doğrudan ilişki kurulamaz, ara bir tablo kullanılır.<br><br>
+
+<b>İlişkili Tablolar Ne İşe Yarar?</b><br><br>
+📍 1. Veri karmaşasını önlüyor.<br>
+📍 2. Veri tekrarını önlüyor.<br>
+📍 3. Bellek performansı sağlıyor.<br><br>
+
+💯 <b>Burada en çok bire çok ilişki kuracağız.</b><br><br>
+
+📍 İlk olarak yeni bir tablo oluşturacağız.<br><br>
+![image](https://github.com/user-attachments/assets/62077aa5-a3f3-4784-b93f-d77fbcfccf9b)<br>
+Oluşturacağımız tablonun ismini TBLKULUPLER olarak belirledik. Burada 2 tane sütun ekledik. KULUPID değerini otomatik artan olarak belirledik ve KULUPAD sütununun varchar değerini 50 karakter olarak belirledik.<br><br>
+![image](https://github.com/user-attachments/assets/739e01a9-26fd-49c0-a593-4ea58b4354c7)<br>
+TBLKULUPLER tablosuna ait veri girişlerimizi yaptık.<br><br>
+
+
