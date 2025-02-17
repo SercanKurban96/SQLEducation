@@ -375,7 +375,7 @@ Ekran çıktısı bu şekilde olacaktır. Dilerseniz TBLNOTLAR tablosunda yer al
 
 ## 📌 3. Alt Sorgular (Subquery)
 Bir SQL sorgusu içinde başka bir SQL sorgusu kullanmaktır. WHERE, SELECT, FROM ve HAVING gibi ifadelerde kullanılabilir.<br><br>
-📍 Örnek: TBLDERSLER tablosunda yer alan ismi 'Matematik' olan derse ait not bilgilerini görüntüleme<br><br>
+📍 Örnek: TBLDERSLER tablosunda yer alan ismi 'Matematik' olan derse ait not bilgilerini görüntüleme<br>
 SELECT * FROM TBLNOTLAR WHERE DERS=(SELECT DERSID FROM TBLDERSLER WHERE DERSAD='Matematik')<br>
 
 ### 📌 Özet
