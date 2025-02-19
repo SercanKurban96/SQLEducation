@@ -440,8 +440,15 @@ SELECT * FROM TBLKULUPLER UNION SELECT * FROM TBLDERSLER<br><br>
 <hr>
 
 # 🖥️ Bölüm 6 - Aritmetik Fonksiyonlar
+SQL'de aritmetik fonksiyonlar, sayısal veriler üzerinde matematiksel işlemler yapmak için kullanılır.<br><br>
+### 📝 SQL Aritmetik Fonksiyonlar
+![image](https://github.com/user-attachments/assets/1fd5f3d7-00bf-43ee-9079-f90c0fb2bd2f)<br><br>
+Örnek: SELECT 20+4 AS 'TOPLAM', 20-4 AS 'FARK', 20*4 AS 'ÇARPIM', 20/4 AS 'BÖLÜM'<br><br>
 
-
+### 📝 SQL Matematiksel Fonksiyonlar
+![image](https://github.com/user-attachments/assets/c1de7793-0b1e-4d8d-91c1-18df63daa8dd)<br><br>
+SELECT ABS(-85) AS 'MUTLAK'<br>
+SELECT POWER(2,4) AS 'ÜS ALMA'<br><br>
 
 
 
