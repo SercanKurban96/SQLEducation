@@ -466,7 +466,11 @@ SQL'de alfabetik (string/metin) fonksiyonlar, metinleri değiştirmek, birleşti
 ## 📝 Temel Alfabetik Fonksiyonlar<br><br>
 ![image](https://github.com/user-attachments/assets/54701142-97c8-4da6-9a44-42ee395f7988)<br><br>
 
-📍Upper ve Lower Fonksiyon Örneği:<br>
+📍 Upper ve Lower Fonksiyon Örneği:<br>
 SELECT UPPER(OGRAD) AS 'ÖĞRENCİ ADI', UPPER(OGRSOYAD) AS 'SOYAD',<br>
 LOWER(OGRSEHIR) AS 'ŞEHİR' FROM TBLOGRENCILER<br><br>
+
+📍 Substring Komutu Örneği:<br>
+Kullanımı şu şekildedir: SUBSTRING(SÜTUN ADI, BAŞLANGIÇ DEĞERİ, KARAKTER UZUNLUK DEĞERİ)<br>
+SELECT SUBSTRING(OGRAD,1,2) FROM TBLOGRENCILER<br><br>
 
