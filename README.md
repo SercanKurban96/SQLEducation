@@ -422,12 +422,20 @@ ON TBLOGRENCILER.OGRID = TBLNOTLAR.OGRENCI<br><br>
 Her iki tabloda da olan tüm kayıtları getirir.<br>
 Eşleşme yoksa NULL değer döndürülür.<br><br>
 
+📍 Örnek: Öğrenciler ile TBLNOTLAR tablosunda hem TBLOGRENCILER hem de TBLNOTLAR tablosunda olan bütün kayıtları getiren sorgu<br>
+SELECT * FROM TBLNOTLAR<br>
+FULL JOIN TBLOGRENCILER<br>
+ON TBLOGRENCILER.OGRID = TBLNOTLAR.OGRENCI<br><br>
+
 ### ✅ UNION
 UNION, iki veya daha fazla SELECT sorgusunun sonuçlarını birleştirmek için kullanılır.<br><br>
 <b>Temel Kurallar:</b><br><br>
 ✅ Tüm sorguların aynı sayıda sütun döndürmesi gerekir.<br>
 ✅ Sütun veri türleri uyumlu olmalıdır.<br>
 ✅ Varsayılan olarak tekrar eden kayıtları (duplicate) kaldırır.<br>
+
+📍 Örnek: TBLKULUPLER ile TBLDERSLER tablolarını birleştiren sorgu<br>
+SELECT * FROM TBLKULUPLER UNION SELECT * FROM TBLDERSLER<br><br>
 
 
 
