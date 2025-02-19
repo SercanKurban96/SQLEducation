@@ -437,6 +437,9 @@ UNION, iki veya daha fazla SELECT sorgusunun sonuçlarını birleştirmek için 
 📍 Örnek: TBLKULUPLER ile TBLDERSLER tablolarını birleştiren sorgu<br>
 SELECT * FROM TBLKULUPLER UNION SELECT * FROM TBLDERSLER<br><br>
 
+<hr>
+
+# 🖥️ Bölüm 6 - Aritmetik Fonksiyonlar
 
 
 
