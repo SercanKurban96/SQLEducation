@@ -404,9 +404,19 @@ ON TBLOGRENCILER.OGRID = TBLNOTLAR.OGRENCI<br><br>
 Sol (birinci) tablodaki tüm kayıtları ve sağ (ikinci) tablodaki eşleşen kayıtları getirir.<br>
 Eşleşme yoksa sağ tablo sütunları NULL olur.<br><br>
 
+📍 Örnek: Öğrenciler ile TBLNOTLAR tablosunda olan bütün kayıtları getiren ancak birleştirme işlemini TBLNOTLAR tablosuna göre yapan sorgu
+SELECT * FROM TBLNOTLAR<br>
+LEFT JOIN TBLOGRENCILER<br>
+ON TBLOGRENCILER.OGRID = TBLNOTLAR.OGRENCI<br><br>
+
 ### ✅  RIGHT (OUTER) JOIN
 Sağ (ikinci) tablodaki tüm kayıtları ve sol (birinci) tablodaki eşleşen kayıtları getirir.<br>
 Eşleşme yoksa sol tablo sütunları NULL olur.<br><br>
+
+📍 Örnek: Öğrenciler ile TBLNOTLAR tablosunda olan bütün kayıtları getiren ancak birleştirme işlemini TBLOGRENCILER tablosuna göre yapan sorgu<br>
+SELECT * FROM TBLNOTLAR<br>
+RIGHT JOIN TBLOGRENCILER<br>
+ON TBLOGRENCILER.OGRID = TBLNOTLAR.OGRENCI<br><br>
 
 ### ✅  FULL (OUTER) JOIN
 Her iki tabloda da olan tüm kayıtları getirir.<br>
