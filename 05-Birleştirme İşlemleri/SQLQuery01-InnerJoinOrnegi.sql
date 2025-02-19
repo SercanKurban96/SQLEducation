@@ -1,0 +1,4 @@
+--Öðrenciler ile TBLNOTLAR tablosunda olan bütün kayýtlarý getiren sorgu
+SELECT * FROM TBLNOTLAR
+INNER JOIN TBLOGRENCILER
+ON TBLOGRENCILER.OGRID = TBLNOTLAR.OGRENCI
