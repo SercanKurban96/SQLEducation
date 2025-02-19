@@ -480,3 +480,16 @@ SELECT SUBSTRING(OGRAD,1,2) FROM TBLOGRENCILER<br><br>
 📍 Len Komutu Örneği:<br>
 SELECT LEN('MERHABA')<br><br>
 
+📍 LTrim, RTrim, Replace Komutları Örneği:<br><br>
+Sol taraftaki boşluğu kaldıran komut<br>
+SELECT LTRIM('			Korkma Sönmez Bu Şafaklarda Yüzen Al Sancak			')<br><br>
+
+Sağ taraftaki boşluğu kaldıran komut<br>
+SELECT RTRIM('			Korkma Sönmez Bu Şafaklarda Yüzen Al Sancak			')<br><br>
+
+Replace komutu için değerler aşağıdaki gibidir:<br><br>
+📍 1. Parametre Ana Kelime, Cümle<br>
+📍 2. Parametre Bulunacak Değer<br>
+📍 3. Parametre Yeni Değer<br>
+SELECT REPLACE('Sercan Kurban','Kurban','K.Ban')<br><br>
+
