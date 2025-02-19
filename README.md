@@ -487,9 +487,20 @@ SELECT LTRIM('			Korkma Sönmez Bu Şafaklarda Yüzen Al Sancak			')<br><br>
 Sağ taraftaki boşluğu kaldıran komut<br>
 SELECT RTRIM('			Korkma Sönmez Bu Şafaklarda Yüzen Al Sancak			')<br><br>
 
-Replace komutu için değerler aşağıdaki gibidir:<br><br>
-📍 1. Parametre Ana Kelime, Cümle<br>
-📍 2. Parametre Bulunacak Değer<br>
-📍 3. Parametre Yeni Değer<br>
+Replace komutu için parametreler aşağıdaki gibidir:<br><br>
+✅ 1. Parametre Ana Kelime, Cümle<br>
+✅ 2. Parametre Bulunacak Değer<br>
+✅ 3. Parametre Yeni Değer<br>
 SELECT REPLACE('Sercan Kurban','Kurban','K.Ban')<br><br>
 
+📍 Charindex ve Reverse Komutları Örneği:<br><br>
+Charindex komutu için parametreler aşağıdaki gibidir:<br><br>
+✅ 1. Karakter Değeri<br>
+✅ 2. Girilen Karakter Değerinin Kaçıncı Sırada Olduğunu Bulan Değer<br>
+✅ 3. Kaçıncı Karakterden İtibaren Başla<br>
+SELECT CHARINDEX('a','SQL Derslerine Devam Ediyoruz', 20)<br><br>
+
+Karakteri tersten yazdırma komutu<br>
+SELECT REVERSE('Sercan')<br><br>
+
+<hr>
