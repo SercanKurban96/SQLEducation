@@ -385,10 +385,39 @@ SELECT * FROM TBLNOTLAR WHERE DERS=(SELECT DERSID FROM TBLDERSLER WHERE DERSAD='
 
 <hr>
 
+# 🖥️ Bölüm 5 - Birleştirme İşlemleri
+SQL'de birleştirme (JOIN) işlemleri, iki veya daha fazla tabloyu ortak bir sütun üzerinden ilişkilendirerek tek bir veri kümesi olarak getirmek için kullanılır.<br><br>
 
+📌 JOIN Türleri<br>
+SQL'de kullanılan temel birleştirme türleri şunlardır:<br><br>
 
+### ✅ INNER JOIN
+İki tabloda da eşleşen kayıtları getirir.<br>
+Eşleşmeyen kayıtlar dahil edilmez.<br><br>
 
+📍 Örnek: Öğrenciler ile TBLNOTLAR tablosunda olan bütün kayıtları getiren sorgu<br>
+SELECT * FROM TBLNOTLAR<br>
+INNER JOIN TBLOGRENCILER<br>
+ON TBLOGRENCILER.OGRID = TBLNOTLAR.OGRENCI<br><br>
 
+### ✅  LEFT (OUTER) JOIN
+Sol (birinci) tablodaki tüm kayıtları ve sağ (ikinci) tablodaki eşleşen kayıtları getirir.<br>
+Eşleşme yoksa sağ tablo sütunları NULL olur.<br><br>
+
+### ✅  RIGHT (OUTER) JOIN
+Sağ (ikinci) tablodaki tüm kayıtları ve sol (birinci) tablodaki eşleşen kayıtları getirir.<br>
+Eşleşme yoksa sol tablo sütunları NULL olur.<br><br>
+
+### ✅  FULL (OUTER) JOIN
+Her iki tabloda da olan tüm kayıtları getirir.<br>
+Eşleşme yoksa NULL değer döndürülür.<br><br>
+
+### ✅ UNION
+UNION, iki veya daha fazla SELECT sorgusunun sonuçlarını birleştirmek için kullanılır.<br><br>
+<b>Temel Kurallar:</b><br><br>
+✅ Tüm sorguların aynı sayıda sütun döndürmesi gerekir.<br>
+✅ Sütun veri türleri uyumlu olmalıdır.<br>
+✅ Varsayılan olarak tekrar eden kayıtları (duplicate) kaldırır.<br>
 
 
 
