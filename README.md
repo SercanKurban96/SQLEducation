@@ -476,3 +476,7 @@ SELECT SUBSTRING(OGRAD,1,2) FROM TBLOGRENCILER<br><br>
 
 📍 Left Right Komutu Örneği:<br>
 --SELECT LEFT('MERHABA DÜNYA',9), RIGHT('MERHABA İSTANBUL',2)<br><br>
+
+📍 Len Komutu Örneği:<br>
+SELECT LEN('MERHABA')<br><br>
+
