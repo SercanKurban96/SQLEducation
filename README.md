@@ -640,3 +640,16 @@ SELECT * FROM TBLHAREKET WHERE URUN IN(SELECT URUNID FROM TBLURUNLER WHERE KATEG
 
 📍 Örnek Kullanım: Adanalı veya Ankaralı müşterilere satılan ürünlerin toplam fiyatını getiren sorgu<br>
 SELECT SUM(TUTAR) FROM TBLHAREKET WHERE MUSTERI IN(SELECT MUSTERIID FROM TBLMUSTERI WHERE MUSTERISEHIR='ADANA' OR MUSTERISEHIR='ANKARA')<br><br>
+
+📍 Ek olarak yeni bir tablo oluşturduk. Tablomuzun ismini TBLKASA olarak belirledik.<br><br>
+CREATE TABLE TBLKASA<br>
+(<br>
+TOPLAM decimal(18,2)<br>
+)<br><br>
+
+INSERT INTO TBLKASA VALUES (0)<br>
+Buraya ilk olarak bir veri ekledik.<br><br>
+
+📍 TBLHAREKET tablosunda yer alan tutarların toplamını TBLKASA tablosuna aktaralım.<br>
+UPDATE TBLKASA SET TOPLAM = (SELECT SUM(TUTAR) FROM TBLHAREKET)<br><br>
+
