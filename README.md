@@ -580,3 +580,13 @@ Modify dedikten sonra prosedürümüz bu şekilde çıkacaktır.<br><br>
 
 📍 Prosedür silmek için DROP PROCEDURE (ProsedürAdı)<br>
 📍 Prosedür güncellemek için ALTER PROCEDURE (ProsedürAdı) AS (değiştirilecek sütunlar veya isimler vs.)<br>
+
+Parametreli prosedür eklemek için @ işareti kullanırız. Örnek kullanım şu şekildedir:<br><br>
+ALTER PROCEDURE URUNGETIR<br>
+@Deger varchar(50)='BUZDOLABI'<br>
+AS<br>
+SELECT URUNSTOK,URUNMARKA FROM TBLURUNLER<br>
+WHERE URUNAD=@Deger<br><br>
+
+Bu prosedürümüzde @Deger isminde bir parametre oluşturduk ve seçeceğimiz değeri BUZDOLABI olarak belirledik. Verileri görüntüleme sorgusunu yazdıktan sonra bir şart belirledik ve şartımız URUNAD sütununda yer alan @Deger parametresini eşleştirdik. Ardından EXECUTE URUNGETIR sorgusunu çalıştırdığımız zaman sadece BUZDOLABI ürününe ait olan markaları görüntüleyecektir.<br><br>
+
