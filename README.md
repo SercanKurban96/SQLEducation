@@ -533,10 +533,15 @@ Bire çok ilişkilerimizi uyguluyoruz.<br><br>
 📍 TBLPERSONEL PERSONELID --> TBLHAREKET PERSONEL<br><br>
 
 Veri ekleme işlemleri için<br><br>
-TBLKATEGORI için veri ekleme<br>
+📍 TBLKATEGORI için veri ekleme<br>
 INSERT INTO TBLKATEGORI (KATEGORIAD) VALUES ('BİLGİSAYAR')<br><br>
 
-TBLURUNLER için veri ekleme<br>
+📍 TBLURUNLER için veri ekleme<br>
 INSERT INTO TBLURUNLER (URUNAD,URUNMARKA,KATEGORI,URUNALISFIYAT,URUNSATISFIYAT,URUNSTOK)<br>
 VALUES ('BUZDOLABI','SIEMENS',2,4356,4588,10)<br><br>
 
+Update Örnekleri<br><br>
+UPDATE TBLURUNLER SET URUNAD='SU ISITICI' WHERE URUNAD='KETTLE'<br><br>
+
+📍 Kategorinin ismi BİLGİSAYAR olan ürünlerin satış fiyatını 500 lira zam yapan sorgu<br>
+UPDATE TBLURUNLER SET URUNSATISFIYAT += 500 WHERE KATEGORI = (SELECT KATEGORIID FROM TBLKATEGORI WHERE KATEGORIAD = 'BİLGİSAYAR') SELECT * FROM TBLURUNLER<br><br>
