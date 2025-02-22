@@ -578,3 +578,5 @@ Modify dedikten sonra prosedürümüz bu şekilde çıkacaktır.<br><br>
 
 📝 Prosedürümüzü çalıştırmak için EXEC (ProsedürAdı) veya EXECUTE (ProsedürAdı) yazıyoruz ve çalıştırıyoruz.<br><br>
 
+📍 Prosedür silmek için DROP PROCEDURE (ProsedürAdı)<br>
+📍 Prosedür güncellemek için ALTER PROCEDURE (ProsedürAdı) AS (değiştirilecek sütunlar veya isimler vs.)<br>
