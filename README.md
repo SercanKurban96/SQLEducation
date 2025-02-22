@@ -629,4 +629,10 @@ SELECT DATEADD(YEAR,3,'2025-02.22')<br><br>
 
 <hr>
 
+# 🖥️ Bölüm 11 - Alt Sorgu Örnekleri
+Bu bölümde alt sorgu örnekleri ile ilgili genel tekrar uygulaması yapılmıştır.<br><br>
+
+📍 Örnek Kullanım: Ürünler içerisinde sadece BİLGİSAYAR kategorisine ait satılmış olan ürünleri listeleyen sorgu<br>
+SELECT * FROM TBLHAREKET WHERE URUN IN(SELECT URUNID FROM TBLURUNLER WHERE KATEGORI=1)<br><br>
+
 
