@@ -522,3 +522,21 @@ KATEGORIID tinyint identity(1,1) primary key,<br>
 KATEGORIAD varchar(50)<br>
 )<br><br>
 
+Diyagramlarımızı oluşturalım. Bunun için SatisVT --> Database Diagrams klasörüne sağ tıklayıp New Database Diagram diyoruz ve bütün diyagramları alıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/ebbd9124-8802-4316-9473-494d6edcecdb)
+<br>
+Bire çok ilişkilerimizi uyguluyoruz.<br><br>
+📍 TBLKATEGORI KATEGORIID --> TBLURUNLER KATEGORI<br>
+📍 TBLURUNLER URUNID --> TBLHAREKET URUN<br>
+📍 TBLMUSTERI MUSTERIID --> TBLHAREKET MUSTERI<br>
+📍 TBLPERSONEL PERSONELID --> TBLHAREKET PERSONEL<br><br>
+
+Veri ekleme işlemleri için<br><br>
+TBLKATEGORI için veri ekleme<br>
+INSERT INTO TBLKATEGORI (KATEGORIAD) VALUES ('BİLGİSAYAR')<br><br>
+
+TBLURUNLER için veri ekleme<br>
+INSERT INTO TBLURUNLER (URUNAD,URUNMARKA,KATEGORI,URUNALISFIYAT,URUNSATISFIYAT,URUNSTOK)<br>
+VALUES ('BUZDOLABI','SIEMENS',2,4356,4588,10)<br><br>
+
