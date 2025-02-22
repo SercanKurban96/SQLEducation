@@ -545,3 +545,36 @@ UPDATE TBLURUNLER SET URUNAD='SU ISITICI' WHERE URUNAD='KETTLE'<br><br>
 
 📍 Kategorinin ismi BİLGİSAYAR olan ürünlerin satış fiyatını 500 lira zam yapan sorgu<br>
 UPDATE TBLURUNLER SET URUNSATISFIYAT += 500 WHERE KATEGORI = (SELECT KATEGORIID FROM TBLKATEGORI WHERE KATEGORIAD = 'BİLGİSAYAR') SELECT * FROM TBLURUNLER<br><br>
+
+<hr>
+
+# 🖥️ Bölüm 9 - Prosedürler
+İlk olarak TBLHAREKET tablosuna birkaç adet veri girişi yapalım.<br><br>
+
+![image](https://github.com/user-attachments/assets/5d075461-9401-4575-b65e-d7d7b2a11572)
+<br>
+Veri girişlerimizi yaptık. Şimdi prosedür uygulayacağız.<br><br>
+
+Prosedür oluşturmak için CREATE PROCEDURE (ProsedürAdı) yazıyoruz ve ardından AS diyoruz. Bunları yazdıktan sonra yazacağımız sorguyu yazıp çalıştırıyoruz.<br><br>
+
+📍 Örnek Prosedür Oluşturma: <br>
+CREATE PROCEDURE HAREKETLER<br>
+AS<br>
+SELECT HAREKETID,URUNAD,MUSTERIAD + ' ' + MUSTERISOYAD AS 'AD SOYAD', PERSONELADSOYAD,ADET,TUTAR,TARIH FROM TBLHAREKET<br>
+INNER JOIN TBLURUNLER ON TBLURUNLER.URUNID = TBLHAREKET.URUN<br>
+INNER JOIN TBLMUSTERI ON TBLMUSTERI.MUSTERIID = TBLHAREKET.MUSTERI<br>
+INNER JOIN TBLPERSONEL ON TBLPERSONEL.PERSONELID = TBLHAREKET.PERSONEL<br><br>
+
+![image](https://github.com/user-attachments/assets/3aae6e5b-a21b-4cfb-80b1-16472632cfbf)
+<br>
+Prosedürümüzü oluşturduktan sonra ilgili veri tabanımıza gelip Programmability klasörüne geliyoruz, ardından Stored Procedures klasörüne geldikten sonra prosedürümüz burada yer alacaktır.<br>
+
+![image](https://github.com/user-attachments/assets/44b621a8-4ed8-446f-837e-783291ff5f86)
+<br>
+Prosedürümüzü görmek için prosedürümüze sağ tıklayıp "Modify" diyoruz.<br>
+![image](https://github.com/user-attachments/assets/ae749cf9-5b8f-4aab-af78-8d33a48e006a)
+<br>
+Modify dedikten sonra prosedürümüz bu şekilde çıkacaktır.<br><br>
+
+📝 Prosedürümüzü çalıştırmak için EXEC (ProsedürAdı) veya EXECUTE (ProsedürAdı) yazıyoruz ve çalıştırıyoruz.<br><br>
+
