@@ -593,6 +593,9 @@ Bu prosedürümüzde @Deger isminde bir parametre oluşturduk ve seçeceğimiz d
 <hr>
 
 # 🖥️ Bölüm 10 - Date Sorguları
+Bu bölümde;<br><br>
+DATEPART, DATENAME, DATEDIFF ve DATEADD konularına yer verilmiştir.<br><br>
+
 ## 🗓️ SQL DATEPART Fonksiyonu
 DATEPART, SQL Server’da belirli bir tarih değerinin içinden yıl, ay, gün, saat, dakika gibi bileşenleri çıkarmak için kullanılan bir fonksiyondur.<br><br>
 
@@ -618,4 +621,12 @@ SQL Server'da DATEDIFF, iki tarih arasındaki farkı belirli bir zaman birimi (g
 
 📍 Örnek Kullanım: Şu anki ile 2022.10.25 tarihin arasındaki yıl farkını gösteren sorgu<br>
 SELECT DATEDIFF(YEAR,'2022.10.25',GETDATE())<br><br>
+
+## 🗓️ SQL DATEADD Fonksiyonu
+SQL Server'da DATEADD, bir tarihe belirli bir zaman birimi (gün, ay, yıl, saat, dakika vb.) eklemek veya çıkarmak için kullanılır.<br><br>
+📍 Örnek Kullanım: Şu anki tarihe 3 yıl ekleyen sorgu<br>
+SELECT DATEADD(YEAR,3,'2025-02.22')<br><br>
+
+<hr>
+
 
