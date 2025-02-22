@@ -504,3 +504,21 @@ Karakteri tersten yazdırma komutu<br>
 SELECT REVERSE('Sercan')<br><br>
 
 <hr>
+
+# 🖥️ Bölüm 8 - Genel Tekrar
+Bu bölümde DDL ve DML komutları kullanarak genel tekrar yapılmıştır.<br><br>
+
+## 📌 DDL Komutları
+📍 Veri tabanı oluşturma<br>
+CREATE DATABASE SatisVT<br><br>
+
+📍 Veri tabanına erişme<br>
+USE SatisVT<br><br>
+
+📍 Örnek Tablo Oluşturma<br>
+CREATE TABLE TBLKATEGORI<br>
+(<br>
+KATEGORIID tinyint identity(1,1) primary key,<br>
+KATEGORIAD varchar(50)<br>
+)<br><br>
+
