@@ -596,7 +596,7 @@ Bu prosedürümüzde @Deger isminde bir parametre oluşturduk ve seçeceğimiz d
 ## 🗓️ SQL DATEPART Fonksiyonu
 DATEPART, SQL Server’da belirli bir tarih değerinin içinden yıl, ay, gün, saat, dakika gibi bileşenleri çıkarmak için kullanılan bir fonksiyondur.<br><br>
 
-Örnek Kullanım: Gün aralığı 1 ve 3 olan değerleri gösteren sorgu<br>
+📍 Örnek Kullanım: Gün aralığı 1 ve 3 olan değerleri gösteren sorgu<br>
 SELECT * FROM TBLHAREKET WHERE DATEPART(DAY,TARIH) BETWEEN 1 AND 3<br><br>
 
 ## 🗓️ SQL DATENAME Fonksiyonu
@@ -612,3 +612,10 @@ SELECT DATENAME(MONTH,getdate())<br><br>
 
 Girilen tarihe göre haftayı gösteren sorgu<br>
 SELECT DATENAME(WEEKDAY,'2025.06.10')<br><br>
+
+## 🗓️ SQL DATEDIFF Fonksiyonu
+SQL Server'da DATEDIFF, iki tarih arasındaki farkı belirli bir zaman birimi (gün, ay, yıl, saat, dakika vb.) cinsinden hesaplamak için kullanılır.<br><br>
+
+📍 Örnek Kullanım: Şu anki ile 2022.10.25 tarihin arasındaki yıl farkını gösteren sorgu<br>
+SELECT DATEDIFF(YEAR,'2022.10.25',GETDATE())<br><br>
+
