@@ -656,7 +656,7 @@ UPDATE TBLKASA SET TOPLAM = (SELECT SUM(TUTAR) FROM TBLHAREKET)<br><br>
 <hr>
 
 # 🖥️ Bölüm 12 - Tetikleyiciler
-## ⚙️ SQL Trigger Nedir?
+## ⚙️ Trigger Nedir?
 Trigger (Tetikleyici), bir veritabanı tablosunda belirli bir olay gerçekleştiğinde (INSERT, UPDATE veya DELETE gibi) otomatik olarak çalışan özel bir SQL prosedürüdür.<br><br>
 
 ### 📝 Trigger'ın Özellikleri:
@@ -697,3 +697,54 @@ Oluşturduğumuz trigger bu şekilde gelmiş oldu.<br><br>
 
 <hr>
 
+# 🖥️ Bölüm 13 - View
+## ⚙️ View (Görünüm) Nedir?
+View, SQL'de sanal bir tablo olarak tanımlanabilir. Gerçek bir tablo gibi sorgulanabilir, ancak fiziksel olarak veri içermez. View, bir veya birden fazla tablodan gelen verileri içeren bir sorgunun sonucunu kaydeder ve sanki bir tabloymuş gibi kullanılmasını sağlar.<br><br>
+### 📝 View Kullanım Amaçları
+
+✅ <b>Karmaşık Sorguları Kolaylaştırmak</b><br>
+Tekrarlanan karmaşık sorgular yerine bir View oluşturularak, aynı sorgu tekrar tekrar yazılmadan kullanılabilir.<br><br>
+
+✅ <b>Veri Güvenliğini Sağlamak</b><br>
+Kullanıcıların yalnızca belirli sütunlara veya satırlara erişmesini sağlamak için View kullanılabilir.<br><br>
+
+✅ <b>Bakımı Kolaylaştırmak</b><br>
+Tablo yapısı değiştiğinde, yalnızca View güncellenerek uygulamalarda değişiklik yapılmasına gerek kalmaz.<br><br>
+
+✅ <b>Performansı Artırmak</b><br>
+Özellikle Indexed View kullanılarak bazı durumlarda performans avantajı sağlanabilir.<br><br>
+
+📍 View Oluşturma şu şekildedir:<br>
+CREATE VIEW TEST1<br>
+AS<br>
+SELECT * FROM TBLKATEGORI<br><br>
+
+![image](https://github.com/user-attachments/assets/874c3a29-6cd1-4472-96df-7b0c935b3ce4)
+<br>
+Sorguyu çalıştırdıktan sonra ilgili veri tabanımıza ait olan Views klasörüne geliyoruz ve oluşturduğumuz View'i burada görüntülüyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/97c9eace-57d7-421b-bf32-96133fd265fa)
+<br>
+View'i görüntüleyebilmek için oluşturduğumuz TEST1'e sağ tıklayıp Design diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/daf6c36f-0d5b-4bb7-86b7-d81280b28a85)
+<br>
+View karşımıza bu şekilde çıkmaktadır. Bu sayfamızda 3 farklı kısım karşımıza çıkmaktadır.<br><br>
+
+1️⃣ Üstte bulunan birinci kısımda View'in dahil olduğu tablolar bulunmaktadır. Buraya isterseniz sağ tuş yapıp Add Table diyerek yeni tablolar, viewler veya fonksiyonlar ekleyebilirsiniz. Başka bir ihtimal, bu tabloyu sağ tıklayıp Remove diyerek silebiliriz, veya sadece ismin, sütunların gözükmesini sağlayabiliriz.<br>
+2️⃣ İkinci kısımda seçmiş olduğumuz tabloya ait sütunların ve bu sütunların özelliklerini, sıralama tiplerini vs. gözüktüğü alandır. Alias dediğimiz kısım takma ad kısmıdır. Bunları Visual Studio üzerinden Dataset kullandığımızda göreceğiz.<br>
+3️⃣ Üçüncü kısımda ise tabloya ait yukarıda çekilmiş olan sütunların sorgu kısmı mevcuttur.<br><br>
+
+✅ View'i kaydettikten sonra kendisi otomatik olarak view'i güncellemiş oldu.<br><br>
+
+📍 View'in çalışması için: SELECT * FROM TEST1<br><br>
+📍 View'i güncellemek için:<br>
+ALTER VIEW TEST1<br>
+AS<br>
+SELECT * FROM TBLKATEGORI WHERE KATEGORIID<4<br><br>
+
+View'i güncelledikten sonra tekrardan TEST1'e sağ tıklayıp Design diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/bf347fd0-644e-4e18-b0df-dd3496e982f2)
+<br>
+Bu kez ikinci kısımda yer alan Filter kısmı bize şartı belirlemiş oldu. Üçüncü kısma yazdığımız yeni sorgu burada gözükmüş oldu.<br><br>
