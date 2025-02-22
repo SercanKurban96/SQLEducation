@@ -1,0 +1,11 @@
+--KASA TABLOSU
+--CREATE TABLE TBLKASA
+--(
+--TOPLAM decimal(18,2)
+--)
+
+--INSERT INTO TBLKASA VALUES (0)
+--SELECT * FROM TBLKASA
+
+--TBLHAREKET tablosunda yer alan tutarlarýn toplamýný TBLKASA tablosuna aktarma
+--UPDATE TBLKASA SET TOPLAM = (SELECT SUM(TUTAR) FROM TBLHAREKET)
