@@ -630,7 +630,7 @@ SELECT DATEADD(YEAR,3,'2025-02.22')<br><br>
 <hr>
 
 # 🖥️ Bölüm 11 - Alt Sorgu Örnekleri
-Bu bölümde alt sorgu örnekleri ile ilgili genel tekrar uygulamaları yapılmıştır.<br><br>
+Bu bölümde alt sorgular ile ilgili genel tekrar uygulamaları yapılmıştır.<br><br>
 
 📍 Örnek Kullanım: Ürünler içerisinde sadece BİLGİSAYAR kategorisine ait satılmış olan ürünleri listeleyen sorgu<br>
 SELECT * FROM TBLHAREKET WHERE URUN IN(SELECT URUNID FROM TBLURUNLER WHERE KATEGORI=1)<br><br>
@@ -652,4 +652,48 @@ Buraya ilk olarak bir veri ekledik.<br><br>
 
 📍 TBLHAREKET tablosunda yer alan tutarların toplamını TBLKASA tablosuna aktaralım.<br>
 UPDATE TBLKASA SET TOPLAM = (SELECT SUM(TUTAR) FROM TBLHAREKET)<br><br>
+
+<hr>
+
+# 🖥️ Bölüm 12 - Tetikleyiciler
+## ⚙️ SQL Trigger Nedir?
+Trigger (Tetikleyici), bir veritabanı tablosunda belirli bir olay gerçekleştiğinde (INSERT, UPDATE veya DELETE gibi) otomatik olarak çalışan özel bir SQL prosedürüdür.<br><br>
+
+### 📝 Trigger'ın Özellikleri:
+✅ Belirli bir tabloya bağlıdır.<br>
+✅ INSERT, UPDATE veya DELETE işlemleriyle tetiklenir.<br>
+✅ BEFORE (Öncesinde) veya AFTER (Sonrasında) çalışabilir.<br>
+✅ Otomatik olarak çalışır, manuel olarak çağrılamaz.<br><br>
+
+⚠️ SQL Trigger’lar veritabanı yönetimini otomatize etmek için güçlü bir araçtır ancak aşırı kullanımı performans sorunlarına neden olabilir. İhtiyaca göre dikkatli kullanılmalıdır!<br><br>
+
+📍 SatisVT veri tabanı üzerinden yeni bir tablo oluşturuyoruz ve ismini TBLSAYAC olarak belirliyoruz.<br><br>
+CREATE TABLE TBLSAYAC<br>
+(<br>
+ISLEM int<br>
+)<br><br>
+
+Veri eklemek için INSERT INTO TBLSAYAC VALUES (0)<br>
+Ardından TBLHAREKET tablosunda toplamda kaç kayıt varsa güncellemek için UPDATE TBLSAYAC SET ISLEM = (SELECT COUNT(*) FROM TBLHAREKET)<br><br>
+
+✅ Artık Trigger (Tetikleyici) oluşturabiliriz.<br><br>
+CREATE TRIGGER ISLEMARTIS<br>
+ON TBLHAREKET<br>
+AFTER INSERT<br>
+AS<br>
+UPDATE TBLSAYAC SET ISLEM=ISLEM+1<br><br>
+
+TBLHAREKET tablosunda herhangi bir kayıt girdiğimiz zaman tetikleyici otomatik olarak birer artacaktır.<br><br>
+![image](https://github.com/user-attachments/assets/990a5156-e493-4ec3-aa88-f2afad913593)
+<br>
+Burada tetikleyici, üzerinde çalıştığımız tablonun altındadır, yani TBLHAREKET tablosu üzerinde çalıştık. Triggers klasörüne geldiğimiz zaman oluşturduğumuz tetikleyiciyi görebiliriz.<br><br>
+
+![image](https://github.com/user-attachments/assets/569385e7-0c2f-4aef-9407-13068c282658)
+<br>
+İlgili tetikleyiciye sağ tıklayıp Modify ile görüntüleyebiliriz.<br><br>
+![image](https://github.com/user-attachments/assets/2d9d95e0-58ef-42f1-a3f0-d2f153410b83)
+<br>
+Oluşturduğumuz trigger bu şekilde gelmiş oldu.<br><br>
+
+<hr>
 
