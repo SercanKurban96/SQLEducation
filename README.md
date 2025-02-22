@@ -748,3 +748,52 @@ View'i güncelledikten sonra tekrardan TEST1'e sağ tıklayıp Design diyoruz.<b
 ![image](https://github.com/user-attachments/assets/bf347fd0-644e-4e18-b0df-dd3496e982f2)
 <br>
 Bu kez ikinci kısımda yer alan Filter kısmı bize şartı belirlemiş oldu. Üçüncü kısma yazdığımız yeni sorgu burada gözükmüş oldu.<br><br>
+
+![image](https://github.com/user-attachments/assets/e29d6f4d-1240-4ed4-b3bc-2e4a527f97e9)
+<br>
+Yeni bir View oluşturmak için Views klasörüne sağ tıklayıp New View diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/18841512-05bb-4cd1-a25c-bf057be84aa4)
+<br>
+Karşımıza bu şekilde çıkacaktır. Burada TBLKATEGORI ve TBLURUNLER tablolarını seçiyoruz. Veya tablo oluşturmadan birinci kısma sağ tıklayıp Add Table diyerek oluşturabiliriz.<br><br>
+
+![image](https://github.com/user-attachments/assets/57792eaa-8c09-47cb-8a49-5137fd13d305)
+<br>
+TBLKATEGORU ve TBLURUNLER View sayfası bu şekildedir.<br><br>
+
+![image](https://github.com/user-attachments/assets/30dfe45d-b5b7-4bc5-9bde-2339bddc3aae)
+<br>
+View sayfamızı kaydediyoruz ve ismini TEST2 olarak belirliyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/83c97502-0706-44c3-93d6-061165a8e57b)
+<br>
+Kaydettikten sonra bize bir hata ekranı gösterecektir. Burada hata vermesinin sebebi, view'in içerisine herhangi bir sütun seçilmediğinden bahsetmektedir.<br><br>
+
+![image](https://github.com/user-attachments/assets/7c7363f9-1105-4a60-97f2-e52a51fdb51f)
+<br>
+TBLURUNLER tablosundan URUNID sütununu seçtikten sonra artık kaydedebiliriz. TEST2 isminde kaydediyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/1a65881c-2363-4a2f-ab99-da8d0cbf685f)
+<br>
+Burada URUNAD, URUNMARKA ve KATEGORI sütunlarını da eklemiş olduk. Tekrardan TEST2 View'i kaydediyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/2849bcf3-ee46-49f6-bd17-16ed924bc422)
+<br>
+TEST2 View'i görüntülediğimiz zaman verilerimiz bu şekilde görüntülenecektir, ancak burada KATEGORI kısmı isim yerine ID değerlerini göstermektedir. Bunun için tekrar TEST2 View'e gidiyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/7ba8e032-5ae3-44e0-bfeb-5f2764ea59c7)
+<br>
+Bu kez TBLURUNLER tablosunda yer alan KATEGORI sütununu çıkarıp TBLKATEGORI tablosunda yer alan KATEGORIAD sütununu seçiyoruz ve kaydediyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/01d6609a-5563-4db2-8197-e1e2f82884f0)
+<br>
+Tekrar çalıştırdıktan sonra verilerimiz bu şekilde kategorinin isimleri gelmiş oldu.<br><br>
+
+![image](https://github.com/user-attachments/assets/6dc53a71-a44d-4977-b76c-3c35eba4c80c)
+<br>
+✅ TEST2 View sayfasının üçüncü kısmına istersek kendimiz bir sorgu yazabiliriz. Burada yazdığımız sorgu, içinde a harfi geçen ürün adlarını gösteren sorguyu yazmış olduk.<br><br>
+
+![image](https://github.com/user-attachments/assets/9dd91a52-7178-4831-9131-78e4f5b0fa19)
+<br>
+Sorguyu çalıştırdığımız zaman içinde a harfi olan ürünlerin isimlerini getirmiş oldu.<br><br>
+
