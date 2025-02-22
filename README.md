@@ -506,7 +506,7 @@ SELECT REVERSE('Sercan')<br><br>
 <hr>
 
 # 🖥️ Bölüm 8 - Genel Tekrar
-Bu bölümde DDL ve DML komutları kullanarak genel tekrar yapılmıştır.<br><br>
+Bu bölümde DDL ve DML komutları kullanılarak genel tekrar yapılmıştır.<br><br>
 
 ## 📌 DDL Komutları
 📍 Veri tabanı oluşturma<br>
@@ -630,9 +630,11 @@ SELECT DATEADD(YEAR,3,'2025-02.22')<br><br>
 <hr>
 
 # 🖥️ Bölüm 11 - Alt Sorgu Örnekleri
-Bu bölümde alt sorgu örnekleri ile ilgili genel tekrar uygulaması yapılmıştır.<br><br>
+Bu bölümde alt sorgu örnekleri ile ilgili genel tekrar uygulamaları yapılmıştır.<br><br>
 
 📍 Örnek Kullanım: Ürünler içerisinde sadece BİLGİSAYAR kategorisine ait satılmış olan ürünleri listeleyen sorgu<br>
 SELECT * FROM TBLHAREKET WHERE URUN IN(SELECT URUNID FROM TBLURUNLER WHERE KATEGORI=1)<br><br>
 
+📍 Örnek Kullanım: BEYAZ EŞYA kategorisindeki yapılan harcamaları getiren sorgu (İç içe 3 sorgu)<br>
+SELECT * FROM TBLHAREKET WHERE URUN IN(SELECT URUNID FROM TBLURUNLER WHERE KATEGORI=(SELECT KATEGORIID FROM TBLKATEGORI WHERE KATEGORIAD='BEYAZ EŞYA'))<br><br>
 
