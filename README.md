@@ -797,3 +797,19 @@ Tekrar çalıştırdıktan sonra verilerimiz bu şekilde kategorinin isimleri ge
 <br>
 Sorguyu çalıştırdığımız zaman içinde a harfi olan ürünlerin isimlerini getirmiş oldu.<br><br>
 
+Yeni bir View oluşturuyoruz ve bu kez alacağımız tablolar; TBLHAREKET, TBLURUNLER, TBLPERSONEL ve TBLMUSTERI tabloları olacaktır.<br><br>
+
+![image](https://github.com/user-attachments/assets/cefc8adb-68c3-4f5e-853c-844d618ee5f9)
+<br>
+### 📝 Seçtiğimiz tabloya ait sütunlar;
+📍 TBLURUNLER --> URUNAD<br>
+📍 TBLMUSTERI --> MUSTERIAD, MUSTERISOYAD<br>
+📍 TBLPERSONEL --> PERSONELADSOYAD<br>
+📍 TBLHAREKET --> ADET, TUTAR, TARIH<br><br>
+✅ Seçtikten sonra TEST3 isminde kaydediyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/28f5d173-ba1a-44e5-afe9-acff44a270cf)
+<br>
+Buradaki şart, ADET değeri 1'den büyük olanları listeleyecektir. Bunun için sorgu yazmak yerine ikinci kısımda yer alan ADET sütununundaki Filter bölümüne >1 yazmamız yeterli olacaktır.<br><br>
+
+<hr>
