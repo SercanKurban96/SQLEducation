@@ -1096,3 +1096,59 @@ Silme ve güncelleme işlemleri bu şekildedir. Silme ve güncelleme işleminde 
 <br>
 dataGridView özellikler içerisinde şimşek ikonu olan Events kısmından "CellClick" özelliğine geldiğimiz zaman, dataGridView aracında yer alan herhangi bir değere tıkladığımızda ilgili textBox'lara atama işlemi yapmaktadır.<br><br>
 
+Bir form daha oluşturalım ve ismini FrmMusteri olarak belirleyelim.<br><br>
+Burada şehirler için yeni bir tablo oluşturalım. Tablo için script kodları bu repoda yer verilmiştir.<br>
+
+![image](https://github.com/user-attachments/assets/e80b00b6-d024-4813-953f-e6db15fecb89)
+<br>
+📝 City tablosunun ismini TBLSEHIR olarak değiştirdik.<br>
+📝 TBLSEHIR tablosuna ait sütunların isimlerini ise code yerine PLAKA, name yerine SEHIRAD olarak belirledik.<br><br>
+
+![image](https://github.com/user-attachments/assets/adb32bbc-33fd-4a04-9bf6-32b1cb059434)
+<br>
+FrmMusteri formumuzu bu şekilde tasarladık.<br><br>
+
+![image](https://github.com/user-attachments/assets/1da017da-4211-408e-8437-b96840e13032)
+<br>
+Bağlantı adresimizi oluşturduk ve ek olarak metot uyguladık. Listeleme işleminde hem ekleme, hem silme hem de güncelleme işlemleri gerçekleştiği zaman metodumuzu çağırmak bize kolaylık sağlamaktadır.<br><br>
+
+![image](https://github.com/user-attachments/assets/4c26cabd-088b-4a20-974a-82f7b2e4bea8)
+<br>
+Form yüklendiği zaman TBLSEHIR tablosunda yer alan şehirler ComboBox'a aktarılacaktır.<br><br>
+
+![image](https://github.com/user-attachments/assets/dc20ef0c-b831-485f-911d-db7352cefb5f)
+<br>
+
+![image](https://github.com/user-attachments/assets/6124a57e-5687-4a29-8961-66404fb08f51)
+<br>
+
+Ekleme, silme, güncelleme ve dataGridView hücrelerine tıklandığında ilgili textBox, comboBox alanlara atma işlemleri bir önceki yaptığımız Kategoriler tablosundaki gibidir.<br><br>
+
+![image](https://github.com/user-attachments/assets/4a5e5c5b-414c-4b4a-8fa0-78687f9bd42e)
+<br>
+Arama işlemi bu şekildedir. Burada müşterinin adına göre arama yapma işlemini uyguladık.<br><br>
+
+![image](https://github.com/user-attachments/assets/9f056a4e-950a-402e-8f4d-6cc02b5f7fe9)
+<br>
+SQL'e geliyoruz ve daha önceden oluşturduğumuz TEST4 prosedürüne sağ tıklayıp Execute Stored Procedure diyoruz ve çıkan ekrana OK diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/2b304b42-0609-4b7f-b134-baad6b4f66bf)
+<br>
+
+Ana formumuzda iki adet Chart ve dataGridView ekledik. Burada Kritik Stoktaki Ürünler değerlerini dataGridView'e prosedür olarak aktaracağız.<br><br>
+
+![image](https://github.com/user-attachments/assets/91075875-db17-4638-81e8-10cab50209a8)
+<br>
+TEST4 prosedürünü bu şekilde çağırıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/aa62c302-617d-4889-bea0-2e304ff119eb)
+<br>
+Programımızı çalıştırdığımızda kritik stoktaki ürünler bu şekilde görüntülenecektir.<br><br>
+
+![image](https://github.com/user-attachments/assets/90250ffd-37c2-4f60-a362-f3cd773d1456)
+<br>
+Bu kez grafiklere veri çekme işlemi uyguluyoruz. Birinci grafiğe Kategorileri, ikinci grafiğe ise müşterilere ait şehirleri ekranda göstermiş olduk.<br><br>
+
+<hr>
+
+
