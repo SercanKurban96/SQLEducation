@@ -887,8 +887,8 @@ Seçilecek tablolara ait sütunları seçtikten sonra VIEW2 isminde kaydediyoruz
 T-SQL (Transact-SQL), Microsoft SQL Server tarafından kullanılan ve SQL'in (Structured Query Language) genişletilmiş bir versiyonudur. SQL'in standart sorgu dili özelliklerine ek olarak, programlama yetenekleri içerir.<br><br>
 
 ### 📝 T-SQL’in Özellikleri
-<b>Değişken Kullanımı</b><br>
-✅ DECLARE, SET, SELECT INTO ile değişken tanımlama ve atama mümkündür.<br><br>
+✅ <b>Değişken Kullanımı</b><br>
+DECLARE, SET, SELECT INTO ile değişken tanımlama ve atama mümkündür.<br><br>
 
 📍 Örnek Kullanım:<br>
 DECLARE @Sayi int<br>
@@ -914,7 +914,7 @@ Bazı sistem fonksiyonları aşağıda verilmiştir. Sunucu adı, hata, varsayı
 SELECT @@SERVERNAME, @@ERROR, @@DEFAULT_LANGID<br>
 Bu ifadelerde sunucu adı, hatayı, varsayılan dili gösterir.<br><br>
 
-<b>PRINT Kullanımı</b><br>
+✅ <b>PRINT Kullanımı</b><br>
 SQL'de PRINT ifadesi, genellikle hata ayıklama (debugging) veya işlem akışını takip etmek için kullanılır. T-SQL'de (SQL Server için) bir metni veya değişkenin değerini ekrana yazdırmak için PRINT komutu kullanılır.<br><br>
 
 📍 Örnek Kullanım: Print 'Merhaba'<br><br>
@@ -927,4 +927,20 @@ KisiAd varchar(50),<br>
 KisiSehir varchar(15)<br>
 )<br>
 INSERT INTO @Kisiler (KisiAd,KisiSehir) VALUES ('Ali','Malatya')<br><br>
+
+✅ <b>IF-ELSE Kullanımı</b><br>
+SQL'de IF...ELSE yapısı, belirli bir koşula bağlı olarak farklı işlemler gerçekleştirmek için kullanılır. T-SQL (SQL Server) kullanıyorsanız, IF...ELSE şu şekilde kullanılır:<br><br>
+if(SELECT Sum(URUNSTOK) FROM TBLURUNLER) > 100<br>
+print 'Toplam Ürün Sayısı 100 den Büyük'<br>
+else<br>
+print 'Toplam Ürün Sayısı 100 den Küçük'<br><br>
+
+✅ <b>CASE Kullanımı</b><br>
+SQL'de CASE ifadesi, koşullu mantık işlemleri yapmak için kullanılır. IF...ELSE gibi çalışır ama genellikle SELECT, WHERE, ORDER BY gibi SQL ifadeleri içinde kullanılır:<br><br>
+SELECT URUNAD, URUNMARKA, URUNDURUM = CASE URUNDURUM<br>
+WHEN '1' THEN 'ÜRÜN VAR'<br>
+WHEN '0' THEN 'ÜRÜN YOK'<br>
+END<br>
+FROM TBLURUNLER<br><br>
+
 
