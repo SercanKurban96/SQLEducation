@@ -918,3 +918,13 @@ Bu ifadelerde sunucu adı, hatayı, varsayılan dili gösterir.<br><br>
 SQL'de PRINT ifadesi, genellikle hata ayıklama (debugging) veya işlem akışını takip etmek için kullanılır. T-SQL'de (SQL Server için) bir metni veya değişkenin değerini ekrana yazdırmak için PRINT komutu kullanılır.<br><br>
 
 📍 Örnek Kullanım: Print 'Merhaba'<br><br>
+
+📍 Tablo tipinde de bir değişken kullanılabilir. Örneği aşağıda verilmiştir:<br><br>
+DECLARE @Kisiler table<br>
+(<br>
+KisiID int identity(1,1),<br>
+KisiAd varchar(50),<br>
+KisiSehir varchar(15)<br>
+)<br>
+INSERT INTO @Kisiler (KisiAd,KisiSehir) VALUES ('Ali','Malatya')<br><br>
+
