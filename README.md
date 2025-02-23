@@ -894,3 +894,14 @@ T-SQL (Transact-SQL), Microsoft SQL Server tarafından kullanılan ve SQL'in (St
 DECLARE @Sayi int<br>
 set @Sayi=24<br>
 SELECT @Sayi as 'Sonuç'<br><br>
+
+📍 Örnek Algoritma Sorusu: Sorgu kısmından gönderilen 3 basamaklı sayıyı basamaklarına ayıran ve daha sonra bu basamakları toplayan sorgu<br>
+DECLARE @sayi int, @birler int, @onlar int, @yuzler int, @toplam int<br>
+set @sayi=456<br>
+set @yuzler = @sayi / 100<br>
+set @onlar = (@sayi / 10) % 10<br>
+set @birler = @sayi % 10<br>
+set @toplam = @birler + @onlar + @yuzler<br>
+SELECT @yuzler as 'Yüzler', @onlar as 'Onlar', @birler as 'Birler', @toplam as 'Sonuç'<br><br>
+
+
