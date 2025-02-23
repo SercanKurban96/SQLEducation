@@ -815,7 +815,7 @@ Buradaki şart, ADET değeri 1'den büyük olanları listeleyecektir. Bunun içi
 <hr>
 
 # 🖥️ Bölüm 14 - Northwind Veri Tabanı
-ℹ️ Nortwind veri tabanına erişmek için "14-Northwind Veri Tabanı" adlı klasörden indirebilirsiniz.<br><br>
+ℹ️ Nortwind veri tabanına erişmek için https://disk.yandex.com.tr/d/wuDMwIoKOcfLdw linkten indirebilirsiniz.<br><br>
 
 Nortwind veri tabanı bize hazır olarak sunduğu tabloların oluştuğu, verilerin yer aldığı bir veri tabanıdır. Northwind veri tabanımızı açıyoruz.<br><br>
 
@@ -856,3 +856,30 @@ SELECT OrderID,CompanyName,FirstName + ' ' + LastName AS 'Employee',OrderDate,Sh
 INNER JOIN Customers ON Customers.CustomerID = Orders.CustomerID<br>
 INNER JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID<br><br>
 
+![image](https://github.com/user-attachments/assets/4f7808b3-6717-4fc2-8804-0631187cb219)
+<br>
+Nortwind veri tabanı üzerinden yeni bir View oluşturalım.<br><br>
+
+![image](https://github.com/user-attachments/assets/fc3133b7-e0bf-495d-93d0-9ee966cd5641)
+<br>
+Burada Orders, Customers ve Employees tabloları üzerinde çalışacağız.<br><br>
+
+### 📝 Seçilecek tablolar ve sütunları:
+Orders --> OrderID<br>
+Customers --> CompanyName<br>
+Customers --> ContactTitle<br>
+Customers --> City<br>
+Employees --> FirstName<br>
+Employees --> LastName<br>
+Employees --> Country<br>
+Orders --> OrderDate<br>
+Orders --> ShipCity<br>
+Orders --> ShipRegion<br>
+Orders --> ShipCountry<br><br>
+![image](https://github.com/user-attachments/assets/96b58cf4-2d37-4637-abdc-7c3d49634128)
+<br>
+Seçilecek tablolara ait sütunları seçtikten sonra VIEW2 isminde kaydediyoruz. Burada istediğiniz sorguları yazabilirsiniz.<br><br>
+
+<hr>
+
+# 🖥️ Bölüm 15 - T-SQL
