@@ -910,5 +910,7 @@ Declare @Bakiye int<br>
 set @Bakiye=(SELECT MAX(MUSTERIBAKIYE) FROM TBLMUSTERI)<br>
 SELECT @Bakiye<br><br>
 
-
+Bazı sistem fonksiyonları aşağıda verilmiştir. Sunucu adı, hata, varsayılan dil gibi birçok sistem fonksiyonları mevcuttur, ancak SQL'de pek fazla kullanılmamaktadır.
+SELECT @@SERVERNAME, @@ERROR, @@DEFAULT_LANGID<br>
+Bu ifadelerde sunucu adı, hatayı, varsayılan dili gösterir.<br><br>
 
