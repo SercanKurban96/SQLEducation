@@ -1,0 +1,11 @@
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\bin\Debug\Proje_SQL_DB.exe.config
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\bin\Debug\Proje_SQL_DB.exe
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\bin\Debug\Proje_SQL_DB.pdb
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\obj\Debug\Proje_SQL_DB.csproj.AssemblyReference.cache
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\obj\Debug\Proje_SQL_DB.Form1.resources
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\obj\Debug\Proje_SQL_DB.FrmKategoriler.resources
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\obj\Debug\Proje_SQL_DB.Properties.Resources.resources
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\obj\Debug\Proje_SQL_DB.csproj.GenerateResource.cache
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\obj\Debug\Proje_SQL_DB.csproj.CoreCompileInputs.cache
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\obj\Debug\Proje_SQL_DB.exe
+C:\Users\beste\source\repos\Proje_SQL_DB\Proje_SQL_DB\obj\Debug\Proje_SQL_DB.pdb
