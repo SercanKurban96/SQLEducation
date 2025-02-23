@@ -955,3 +955,35 @@ WHEN URUNSTOK > 10 THEN 'ÜRÜN STOK SAYISI YETERLİ'<br>
 END<br>
 FROM TBLURUNLER<br><br>
 Burada TEST4 isminde bir prosedür oluşturduk. Ardından seçeceğimiz tabloya ait sütunları yazdık. Buradaki amaç, URUNSTOK değerlerine göre CASE işlemleri yapmaktır. Stok değerleri 1 ile 5 aralığındaysa KRİTİK SEVİYE, 6 ile 10 aralığındaysa TAKVİYE YAPILMALI, 10'dan fazla olan stoklara da ÜRÜN STOK SAYISI YETERLİ olarak belirledik.<br><br>
+
+✅ <b>WHILE Döngüsü</b><br>
+SQL Server'da WHILE döngüsü, belirli bir koşul sağlandığı sürece bir bloğun tekrar tekrar çalıştırılmasını sağlar. Genellikle iteratif işlemler (örneğin, belirli bir sayıda kayıt ekleme, güncelleme veya silme) yapmak için kullanılır.<br><br>
+
+DECLARE @sayac int
+set @sayac=1
+while @sayac<=5
+begin
+print 'Merhaba SQL Dersleri'
+set @sayac = @sayac + 1
+end
+
+### 📌 Açıklamalar:
+@sayac değişkeni int değeri olaraka belirlenir ve 1'den başlatılır.
+WHILE @sayac <= 5 olduğu sürece döngü devam eder.
+BEGIN ifadesiyle başlar.
+PRINT ifadesi ile değer ekrana yazdırılır.
+SET @sayac = @sayac + 1 ile her döngüde @sayac değeri artırılır.
+Koşul sağlanmazsa döngü sona erer.
+END ile sonlandırılır.
+
+✅ <b>WAITFOR Kullanımı</b><br>
+SQL Server'da WAITFOR ifadesi, belirli bir süre boyunca işlemi bekletmek veya belirli bir zamana kadar bekleyip sonra devam etmek için kullanılır.<br><br>
+🔹 İki farklı kullanım şekli vardır:<br><br>
+📍 WAITFOR DELAY → Belirtilen süre kadar bekler.<br>
+📍 WAITFOR TIME → Belirtilen zamana kadar bekler.<br><br>
+
+📍 Örnek Kullanım: 7 saniye sonra TBLURUNLER tablosunu gösteren sorgu<br>
+--WAITFOR DELAY '00:00:07'<br>
+--SELECT * FROM TBLURUNLER<br><br>
+
+<hr>
