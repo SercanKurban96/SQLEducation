@@ -887,7 +887,7 @@ Seçilecek tablolara ait sütunları seçtikten sonra VIEW2 isminde kaydediyoruz
 T-SQL (Transact-SQL), Microsoft SQL Server tarafından kullanılan ve SQL'in (Structured Query Language) genişletilmiş bir versiyonudur. SQL'in standart sorgu dili özelliklerine ek olarak, programlama yetenekleri içerir.<br><br>
 
 ### 📝 T-SQL’in Özellikleri
-:one: <b>Değişken Kullanımı</b><br>
+<b>Değişken Kullanımı</b><br>
 ✅ DECLARE, SET, SELECT INTO ile değişken tanımlama ve atama mümkündür.<br><br>
 
 📍 Örnek Kullanım:<br>
@@ -914,3 +914,7 @@ Bazı sistem fonksiyonları aşağıda verilmiştir. Sunucu adı, hata, varsayı
 SELECT @@SERVERNAME, @@ERROR, @@DEFAULT_LANGID<br>
 Bu ifadelerde sunucu adı, hatayı, varsayılan dili gösterir.<br><br>
 
+<b>PRINT Kullanımı</b><br>
+SQL'de PRINT ifadesi, genellikle hata ayıklama (debugging) veya işlem akışını takip etmek için kullanılır. T-SQL'de (SQL Server için) bir metni veya değişkenin değerini ekrana yazdırmak için PRINT komutu kullanılır.<br><br>
+
+📍 Örnek Kullanım: Print 'Merhaba'<br><br>
