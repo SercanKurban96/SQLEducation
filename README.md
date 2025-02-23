@@ -987,3 +987,111 @@ WAITFOR DELAY '00:00:07'<br>
 SELECT * FROM TBLURUNLER<br><br>
 
 <hr>
+
+# 🖥️ Bölüm 16 - C# ile SQL
+
+Bu bölümde artık C# ile SQL üzerinden proje oluşturuyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/9be5711a-adaf-4817-be9a-d50ba806a973)
+<br>
+Visual Studio 2022'yi açıyoruz. Daha eski versiyonları da kullanabilirsiniz. Visual Studio 2022'yi açtığımızda karşımıza bu şekilde çıkacaktır. Sol tarafta daha önceden yapmış olduğum projeler mevcuttur. Daha önceden herhangi bir proje oluşturmadıysanız bu kısım sizde boş gözükecektir. Bunun için sağ tarafta en alt seçenekte yer alan "Create a new project" diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/00e4ae65-1967-4354-a0f1-e2bc75d8b700)
+<br>
+Bir sonraki ekran bu şekilde çıkmaktadır. Sol tarafta daha önceden kullandığım proje şablonları yer almaktadır, daha önceden herhangi bir şablon oluşturmadıysanız bu kısım sizde boş gözükecektir. Bunun için yukarıda arama çubuğuna "Windows Forms App (.NET Framework)" diyoruz veya arama çubuğunun hemen altında olan üç tane seçeneklerden uygun olan şablonumuzu seçiyoruz. Sol tarafta C#, ortada yer alan All Platforms kısmına isterseniz direkt bu şekilde veya Windows olanı seçebilirsiniz. En sağda ise daha önceden API ile ilgili bir proje yaptığım için o şekilde kalmaktadır, dilerseniz All Project Types yapabilirsiniz. Windows Forms App (.NET Framework) dedikten sonra Next diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/9f96e8de-5006-45dd-8829-78ad06ef6979)
+<br>
+Burada projemizin ismini belirliyoruz. İsmini Proje_SQL_DB olarak belirledik. Location kısmında ilgili dizine oluşturacaktır, dilerseniz değiştirebilirsiniz. Solution kısmında ise ismin gözüktüğü ve işlerimizi yürüteceğimiz alandır. Solution kısmında birden fazla proje bulunabilir. İşlemlerimizi tamamladıktan sonra Create diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/bc206550-c6e4-4ec2-a865-f1197e2183c8)
+<br>
+Projemiz bu şekilde oluşturuldu. Sol tarafta Toolbox (Araç Kutusu) yer almaktadır. Burada Button, Label, TextBox gibi araçları kullanabiliriz. Sağ tarafta bulunan üst kısımda projemize ait katman ve Form yer almaktadır. Alt kısmında ise Form'a ait özellikler yer almaktadır. Bu özellikler; yazı tipini değiştirme, arka plan rengini değiştirme, formun ismini değiştirme gibi özellikler kullanılabilir.<br><br>
+
+### ⚙️ Burada kullanacağımız araçlar:
+📝 Panel<br>
+📝 PictureBox<br>
+📝 Button<br>
+📝 Label<br><br>
+
+![image](https://github.com/user-attachments/assets/ec548149-d7de-4342-92f3-5d80bccd9136)
+<br>
+Formumuzun tasarımını bu şekilde oluşturdum. İlk yapacağımız işlem Kategori için olacaktır. Kategori tablosunda temel CRUD (Create, Read, Update, Delete) işlemlerini yapacağız.<br><br>
+
+![image](https://github.com/user-attachments/assets/06009c89-55c1-4324-bed7-0f25e5906883)
+<br>
+İlk olarak yeni bir Form oluşturuyoruz. Yukarıda yer alan Project sekmesinden Add Form (Windows Forms), veya sağda bulunan Proje_SQL_DB katmanımıza sağ tıklayarak Add kısmından Form diyebiliriz.<br><br>
+
+![image](https://github.com/user-attachments/assets/77e317ea-d3e8-430a-af9a-b58a11da2d66)
+<br>
+FrmKategori formumuzu bu şekilde oluşturduk.<br><br>
+### ⚙️ Burada kullanacağımız araçlar:
+📝 TextBox<br>
+📝 PictureBox<br>
+📝 Button<br>
+📝 Label<br><br>
+
+![image](https://github.com/user-attachments/assets/90425513-c6c7-41ef-bd6c-ed125220d9f0)
+<br>
+Burada veri tabanı bağlama işlemlerini gerçekleştireceğiz. Project kısmından Add New Data Source diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/a0c5670a-70ec-4bab-ba1d-20b4f7986922)
+<br>
+Çıkan pencerede direkt Next diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/d79c3de0-76b7-45d5-982d-c7f9aa9f2229)
+<br>
+Tekrar Next diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/b1de94f9-b6f9-4d40-bbfd-5cd378dc47b6)
+<br>
+Burada daha önceden herhangi bir veri tabanı çalışması yapmadıysanız bu kısım sizde boş gözükecektir. Sağ tarafta bulunan New Connection diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/ed2b7792-1f8a-4526-95a0-877392cec4cf)
+<br>
+Bu kısımda ilk olarak Server Name kısmını giriyoruz. Server Name kısmı, SQL'de yer alan sunucumuzun ismidir. Sunucumuzun ismini öğrenmek için;<br><br>
+
+![image](https://github.com/user-attachments/assets/ab426b49-c9fa-48aa-b205-fabe3615aa75)
+<br>
+SQL'e gelip en üstte bulunan bağlantıyı sağ tıklayıp Properties diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/f13bab0a-86ac-4870-8527-802a7b23f917)
+<br>
+Burası sunucumuzun adıdır. Sunucu adını kopyalıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/1964a3af-d1e3-4594-9e17-e2fc8ae95208)
+<br>
+Tekrardan C#'a dönerek sunucu adımızı yapıştırıyoruz. Encrypt kısmında True seçerseniz aşağıda yer alan Trust Server Certificate kısmını seçmeniz gerekmektedir. Biz burada Optional (False) olarak belirledik. Daha sonra aşağıda yer alan veri tabanımız olan SatisVT'yi seçiyoruz ve OK diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/b34b6f6f-c816-4915-8c35-fb97182bf92a)
+<br>
+Veri tabanımızın adresi gelmiş oldu. Eğer gelmezse "Show the connection" kısmında yer alan kutucuğu işaretleyin. Bağlantı adresimizi kopyalayıp Cancel diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/bfc09efb-6c88-4899-b771-2424965a0ba3)
+<br>
+Daha sonra FrmKategori formumuzun kod kısmına gelerek en üstte yer alan using kütüphanelerine yeni bir kütüphane ekliyoruz ve kütüphanemizin ismi using System.Data.SqlClient olarak ekliyoruz. Ardından kopyaladığımız bağlantıyı buraya eklemek için SqlConnection komutunu yazıyoruz ve bağlantı adresini yapıştırıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/848d586a-a0f8-4252-9ba0-6b6ef5ec9364)
+<br>
+Listeleme işlemi için SqlCommand oluşturuyoruz ve sorgumuzu yazıyoruz. Bu sorguyu baglanti değişkenimize dahil ediyoruz. Ardından SqlDataAdapter da değişkeni oluşturup komutu buraya aktarıyoruz. Tablo oluşturmak için ise DataTable komutundan dt isminde bir değişken kullanıyoruz ve içini doldurmak için da değişkenini dt'ye dolduruyoruz. En sonda bu verileri dataGridView aracından dt'ye aktarıyoruz.<br><br>
+
+Form1'de Kategoriler formuna gitmek için Kategoriler butonuna geliyoruz;<br><br>
+ FrmKategoriler fr = new FrmKategoriler();<br>
+ fr.Show();<br><br>
+
+![image](https://github.com/user-attachments/assets/5b82c45c-67ca-4ecd-82ec-82408649b31f)
+<br>
+Programımızı çalıştırdıktan sonra Kategoriler butonuna basıyoruz. Buradan Listele butonuna bastığımızda veriler görüntülenecektir. Burada sizde kenarları boş gözükebilir bunun için yapacağımız ayar:<br><br>
+
+![image](https://github.com/user-attachments/assets/500211bd-beaa-4e4a-ac8f-5355d8ab481f)
+<br>
+dataGridView aracına tıkladığımızda sağ altta yer alan özelliklerden AutoSizeColumnsMode kısmını Fill yapmanız gerekmektedir.<br><br>
+
+![image](https://github.com/user-attachments/assets/efb4c7bc-b7fc-487f-815c-b83ddaf6aaeb)
+<br>
+Silme ve güncelleme işlemleri bu şekildedir. Silme ve güncelleme işleminde ID'ye göre yapılmaktadır. Güncelleme işleminde ise diğer güncellenecek sütunlar da eklenir.<br><br>
+
+![image](https://github.com/user-attachments/assets/22db902c-8275-4e6f-8bab-fffeca4dda43)
+<br>
+dataGridView özellikler içerisinde şimşek ikonu olan Events kısmından "CellClick" özelliğine geldiğimiz zaman, dataGridView aracında yer alan herhangi bir değere tıkladığımızda ilgili textBox'lara atama işlemi yapmaktadır.<br><br>
+
