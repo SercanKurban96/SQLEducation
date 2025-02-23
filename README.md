@@ -943,4 +943,15 @@ WHEN '0' THEN 'ÜRÜN YOK'<br>
 END<br>
 FROM TBLURUNLER<br><br>
 
+CASE ifadesini bu kez URUNSTOK sütunundaki değerlere göre kritik seviyeyi bulalım:<br><br>
 
+CREATE PROCEDURE TEST4<br>
+AS<br>
+SELECT URUNAD, URUNMARKA, URUNSTOK, URUNSTOK = <br>
+CASE<br>
+WHEN URUNSTOK >= 1 AND URUNSTOK <= 5 THEN 'KRİTİK SEVİYE'<br>
+WHEN URUNSTOK >= 6 AND URUNSTOK <= 10 THEN 'TAKVİYE YAPILMALI'<br>
+WHEN URUNSTOK > 10 THEN 'ÜRÜN STOK SAYISI YETERLİ'<br>
+END<br>
+FROM TBLURUNLER<br><br>
+Burada TEST4 isminde bir prosedür oluşturduk. Ardından seçeceğimiz tabloya ait sütunları yazdık. Buradaki amaç, URUNSTOK değerlerine göre CASE işlemleri yapmaktır. Stok değerleri 1 ile 5 aralığındaysa KRİTİK SEVİYE, 6 ile 10 aralığındaysa TAKVİYE YAPILMALI, 10'dan fazla olan stoklara da ÜRÜN STOK SAYISI YETERLİ olarak belirledik.<br><br>
