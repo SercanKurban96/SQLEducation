@@ -883,3 +883,14 @@ Seçilecek tablolara ait sütunları seçtikten sonra VIEW2 isminde kaydediyoruz
 <hr>
 
 # 🖥️ Bölüm 15 - T-SQL
+## ⚙️ T-SQL (Transact-SQL) Nedir?
+T-SQL (Transact-SQL), Microsoft SQL Server tarafından kullanılan ve SQL'in (Structured Query Language) genişletilmiş bir versiyonudur. SQL'in standart sorgu dili özelliklerine ek olarak, programlama yetenekleri içerir.<br><br>
+
+### 📝 T-SQL’in Özellikleri
+:one: <b>Değişken Kullanımı</b><br>
+✅ DECLARE, SET, SELECT INTO ile değişken tanımlama ve atama mümkündür.<br><br>
+
+📍 Örnek Kullanım:<br>
+DECLARE @Sayi int<br>
+set @Sayi=24<br>
+SELECT @Sayi as 'Sonuç'<br><br>
