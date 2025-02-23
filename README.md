@@ -813,3 +813,36 @@ Yeni bir View oluşturuyoruz ve bu kez alacağımız tablolar; TBLHAREKET, TBLUR
 Buradaki şart, ADET değeri 1'den büyük olanları listeleyecektir. Bunun için sorgu yazmak yerine ikinci kısımda yer alan ADET sütununundaki Filter bölümüne >1 yazmamız yeterli olacaktır.<br><br>
 
 <hr>
+
+# 🖥️ Bölüm 14 - Northwind Veri Tabanı
+ℹ️ Nortwind veri tabanına erişmek için "14-Northwind Veri Tabanı" adlı klasörden indirebilirsiniz.<br><br>
+
+Nortwind veri tabanı bize hazır olarak sunduğu tabloların oluştuğu, verilerin yer aldığı bir veri tabanıdır. Northwind veri tabanımızı açıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/bd215cf7-c272-45b2-80e4-a2f68b3a5d32)
+<br>
+Veri tabanını açtığımız zaman upuzun sorgular çıkmaktadır. F5 ile çalıştırıyoruz. Biraz geç çalışabilir.<br><br>
+
+![image](https://github.com/user-attachments/assets/e2de231c-d874-4f80-b5e7-db5ebc86f914)
+<br>
+Sorgu çıktısında 2 tane hata bulmaktadır, bu hata prosedürün bulunamadığını belirtmektedir ancak bu hataların pek bir önemi yoktur. Veri tabanımız hazır hale gelecektir.<br><br>
+
+![image](https://github.com/user-attachments/assets/83fd2511-e4e5-49bf-9e73-9fdc541733b4)
+<br>
+Northwind veri tabanı bu şekilde gelmektedir.<br><br>
+
+![image](https://github.com/user-attachments/assets/c80c2aae-dfb0-41de-a262-d9c721ebdb1b)
+<br>
+Customers tablosunda yer alan veriler bu şekilde gelmektedir.<br><br>
+
+Northwind Sorgu Örnekleri:<br><br>
+
+📍 Products tablosunda yer alan verileri listeleyen sorgu<br>
+SELECT * FROM Products<br><br>
+
+📍 Products tablosunda yer alan verilerin CategoryName değeri 'SeaFood' olanları listeleyen sorgu<br>
+SELECT * FROM Products WHERE CategoryID = (SELECT CategoryID FROM Categories WHERE CategoryName='SeaFood')<br><br>
+
+📍 Orders tablosu içerisinde şehri Londra olan çalışanların vermiş olduğu siparişleri ve ShipVia=3 olanları ve ShipCity='Oulu' olanları listeleyen sorgu<br>
+SELECT * FROM Orders WHERE EmployeeID IN(SELECT EmployeeID FROM Employees WHERE City = 'London') AND ShipVia=3 AND ShipCity='Oulu'<br><br>
+
