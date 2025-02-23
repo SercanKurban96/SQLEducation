@@ -968,13 +968,13 @@ set @sayac = @sayac + 1<br>
 end<br><br>
 
 ### 📌 Açıklamalar:
-@sayac değişkeni int değeri olaraka belirlenir ve 1'den başlatılır.<br>
-WHILE @sayac <= 5 olduğu sürece döngü devam eder.<br>
-BEGIN ifadesiyle başlar.<br>
-PRINT ifadesi ile değer ekrana yazdırılır.<br>
-SET @sayac = @sayac + 1 ile her döngüde @sayac değeri artırılır.<br>
-Koşul sağlanmazsa döngü sona erer.<br>
-END ile sonlandırılır.<br><br>
+🔹 @sayac değişkeni int değeri olaraka belirlenir ve 1'den başlatılır.<br>
+🔹 WHILE @sayac <= 5 olduğu sürece döngü devam eder.<br>
+🔹 BEGIN ifadesiyle başlar.<br>
+🔹 PRINT ifadesi ile değer ekrana yazdırılır.<br>
+🔹 SET @sayac = @sayac + 1 ile her döngüde @sayac değeri artırılır.<br>
+🔹 Koşul sağlanmazsa döngü sona erer.<br>
+🔹 END ile sonlandırılır.<br><br>
 
 ✅ <b>WAITFOR Kullanımı</b><br>
 SQL Server'da WAITFOR ifadesi, belirli bir süre boyunca işlemi bekletmek veya belirli bir zamana kadar bekleyip sonra devam etmek için kullanılır.<br><br>
@@ -983,7 +983,7 @@ SQL Server'da WAITFOR ifadesi, belirli bir süre boyunca işlemi bekletmek veya 
 📍 WAITFOR TIME → Belirtilen zamana kadar bekler.<br><br>
 
 📍 Örnek Kullanım: 7 saniye sonra TBLURUNLER tablosunu gösteren sorgu<br>
---WAITFOR DELAY '00:00:07'<br>
---SELECT * FROM TBLURUNLER<br><br>
+WAITFOR DELAY '00:00:07'<br>
+SELECT * FROM TBLURUNLER<br><br>
 
 <hr>
