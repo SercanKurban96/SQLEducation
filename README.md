@@ -959,22 +959,22 @@ Burada TEST4 isminde bir prosedür oluşturduk. Ardından seçeceğimiz tabloya 
 ✅ <b>WHILE Döngüsü</b><br>
 SQL Server'da WHILE döngüsü, belirli bir koşul sağlandığı sürece bir bloğun tekrar tekrar çalıştırılmasını sağlar. Genellikle iteratif işlemler (örneğin, belirli bir sayıda kayıt ekleme, güncelleme veya silme) yapmak için kullanılır.<br><br>
 
-DECLARE @sayac int
-set @sayac=1
-while @sayac<=5
-begin
-print 'Merhaba SQL Dersleri'
-set @sayac = @sayac + 1
-end
+DECLARE @sayac int<br>
+set @sayac=1<br>
+while @sayac<=5<br>
+begin<br>
+print 'Merhaba SQL Dersleri'<br>
+set @sayac = @sayac + 1<br>
+end<br><br>
 
 ### 📌 Açıklamalar:
-@sayac değişkeni int değeri olaraka belirlenir ve 1'den başlatılır.
-WHILE @sayac <= 5 olduğu sürece döngü devam eder.
-BEGIN ifadesiyle başlar.
-PRINT ifadesi ile değer ekrana yazdırılır.
-SET @sayac = @sayac + 1 ile her döngüde @sayac değeri artırılır.
-Koşul sağlanmazsa döngü sona erer.
-END ile sonlandırılır.
+@sayac değişkeni int değeri olaraka belirlenir ve 1'den başlatılır.<br>
+WHILE @sayac <= 5 olduğu sürece döngü devam eder.<br>
+BEGIN ifadesiyle başlar.<br>
+PRINT ifadesi ile değer ekrana yazdırılır.<br>
+SET @sayac = @sayac + 1 ile her döngüde @sayac değeri artırılır.<br>
+Koşul sağlanmazsa döngü sona erer.<br>
+END ile sonlandırılır.<br><br>
 
 ✅ <b>WAITFOR Kullanımı</b><br>
 SQL Server'da WAITFOR ifadesi, belirli bir süre boyunca işlemi bekletmek veya belirli bir zamana kadar bekleyip sonra devam etmek için kullanılır.<br><br>
