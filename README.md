@@ -1147,6 +1147,9 @@ Programımızı çalıştırdığımızda kritik stoktaki ürünler bu şekilde 
 
 ![image](https://github.com/user-attachments/assets/90250ffd-37c2-4f60-a362-f3cd773d1456)
 <br>
+
+![image](https://github.com/user-attachments/assets/fa5599da-9aac-45d1-828a-c6f1f369a6ec)
+<br>
 Bu kez grafiklere veri çekme işlemi uyguluyoruz. Birinci grafiğe Kategorileri, ikinci grafiğe ise müşterilere ait şehirleri ekranda göstermiş olduk.<br><br>
 
 <hr>
