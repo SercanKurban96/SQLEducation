@@ -3,19 +3,11 @@
   "WorkspaceRootPath": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|c:\\users\\beste\\source\\repos\\sercankurban96\\sqleducation\\16-c# ile sql\\proje_sql_db\\proje_sql_db\\frmkategoriler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|solutionrelative:proje_sql_db\\frmkategoriler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\proje_sql_db\\frmkategoriler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|solutionrelative:proje_sql_db\\frmkategoriler.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\proje_sql_db\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|c:\\users\\beste\\source\\repos\\sercankurban96\\sqleducation\\16-c# ile sql\\proje_sql_db\\proje_sql_db\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|solutionrelative:proje_sql_db\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\proje_sql_db\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|c:\\users\\beste\\source\\repos\\sercankurban96\\sqleducation\\16-c# ile sql\\proje_sql_db\\proje_sql_db\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{3469DF2E-02C9-4DDC-804B-138223826072}|Proje_SQL_DB\\Proje_SQL_DB.csproj|solutionrelative:proje_sql_db\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
@@ -26,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,50 +26,27 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "Form1.cs",
               "DocumentMoniker": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\Proje_SQL_DB\\Form1.cs",
               "RelativeDocumentMoniker": "Proje_SQL_DB\\Form1.cs",
               "ToolTip": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\Proje_SQL_DB\\Form1.cs",
               "RelativeToolTip": "Proje_SQL_DB\\Form1.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAEwBsAAAAWAAAAAAAAAA==",
+              "ViewState": "AgIAABwAAAAAAAAAAAAQwEIAAABHAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T15:11:29.67Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\Proje_SQL_DB\\Form1.cs",
-              "RelativeDocumentMoniker": "Proje_SQL_DB\\Form1.cs",
-              "ToolTip": "C:\\Users\\beste\\source\\repos\\Proje_SQL_DB\\Proje_SQL_DB\\Form1.cs [Design]",
-              "RelativeToolTip": "..\\..\\..\\..\\Proje_SQL_DB\\Proje_SQL_DB\\Form1.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T15:11:28.693Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "FrmKategoriler.cs",
-              "DocumentMoniker": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\Proje_SQL_DB\\FrmKategoriler.cs",
-              "RelativeDocumentMoniker": "Proje_SQL_DB\\FrmKategoriler.cs",
-              "ToolTip": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\Proje_SQL_DB\\FrmKategoriler.cs",
-              "RelativeToolTip": "Proje_SQL_DB\\FrmKategoriler.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAvwEkAAAAwAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T15:04:35.838Z",
+              "WhenOpened": "2025-02-23T18:00:48.376Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmKategoriler.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\Proje_SQL_DB\\FrmKategoriler.cs",
-              "RelativeDocumentMoniker": "Proje_SQL_DB\\FrmKategoriler.cs",
-              "ToolTip": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\Proje_SQL_DB\\FrmKategoriler.cs [Design]",
-              "RelativeToolTip": "Proje_SQL_DB\\FrmKategoriler.cs [Design]",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\Proje_SQL_DB\\Form1.cs",
+              "RelativeDocumentMoniker": "Proje_SQL_DB\\Form1.cs",
+              "ToolTip": "C:\\Users\\beste\\source\\repos\\SercanKurban96\\SQLEducation\\16-C# ile SQL\\Proje_SQL_DB\\Proje_SQL_DB\\Form1.cs [Design]",
+              "RelativeToolTip": "Proje_SQL_DB\\Form1.cs [Design]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-23T14:38:49.735Z",
+              "WhenOpened": "2025-02-23T17:58:02.783Z",
               "EditorCaption": " [Design]"
             }
           ]
