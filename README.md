@@ -1248,7 +1248,7 @@ SAVEPOINT → Transaction içinde bir geri dönüş noktası oluşturur.<br><br>
 
 ✅ Bu yapı özellikle bankacılık işlemleri, stok yönetimi, sipariş işlemleri gibi kritik veri değişikliklerinde kullanılabilir.<br><br>
 
-Örnek Kullanım:<br>
+📍 Rollback İçin Örnek Kullanım:<br>
 BEGIN TRANSACTION<br>
 INSERT INTO TBLKATEGORI (AD) VALUES ('TV')<br>
 INSERT INTO TBLKATEGORI (AD) VALUES ('HALI')<br>
@@ -1257,3 +1257,11 @@ ROLLBACK<br><br>
 
 Burada 2 tane daha kategori ekleme işlemi yaptık, ancak sorgunun sonuna ROLLBACK eklediğimiz için işlemi iptal etti. Sorgu sorunsuz çalışıyor gibi gözükse de aslında verilere baktığımız zaman bu iki veriyi eklemeyecektir.<br><br>
 
+📍 Commit İçin Örnek Kullanım:<br>
+BEGIN TRANSACTION<br>
+INSERT INTO TBLURUN (AD,STOK) VALUES ('ÜRÜN1',25)<br>
+INSERT INTO TBLURUN (AD,STOK) VALUES ('ÜRÜN2',40)<br>
+SELECT * FROM TBLURUN<br>
+COMMIT<br><br>
+
+Burada 2 tane daha ürün ekleme işlemi yaptık, sorgunun sonuna COMMIT eklediğimiz için ekleme işlemini gerçekleştirecektir. <br><br>
