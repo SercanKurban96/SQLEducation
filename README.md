@@ -904,4 +904,11 @@ set @birler = @sayi % 10<br>
 set @toplam = @birler + @onlar + @yuzler<br>
 SELECT @yuzler as 'Yüzler', @onlar as 'Onlar', @birler as 'Birler', @toplam as 'Sonuç'<br><br>
 
+Tablo içi değişkenler kullanımında SatisVT adlı veri tabanımız üzerinden yapacağız.<br><br>
+📍 Örnek Kullanım: TBLMUSTERI tablosunda MUSTERIBAKIYE en fazla olanı değişken ile tanımlama<br>
+Declare @Bakiye int<br>
+set @Bakiye=(SELECT MAX(MUSTERIBAKIYE) FROM TBLMUSTERI)<br>
+SELECT @Bakiye<br><br>
+
+
 
