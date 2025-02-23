@@ -846,3 +846,13 @@ SELECT * FROM Products WHERE CategoryID = (SELECT CategoryID FROM Categories WHE
 📍 Orders tablosu içerisinde şehri Londra olan çalışanların vermiş olduğu siparişleri ve ShipVia=3 olanları ve ShipCity='Oulu' olanları listeleyen sorgu<br>
 SELECT * FROM Orders WHERE EmployeeID IN(SELECT EmployeeID FROM Employees WHERE City = 'London') AND ShipVia=3 AND ShipCity='Oulu'<br><br>
 
+![image](https://github.com/user-attachments/assets/8b68cd96-2919-435f-a2c8-5512f5976283)
+<br>
+Burada TEST1 isminde bir View oluşturmaya çalıştık ancak hata aldık. Çünkü daha önceden prosedür kullanırken bu ismi vermiştik. Onun yerine ismini VIEW1 olarak belirleyelim.<br><br>
+
+CREATE VIEW VIEW1<br>
+AS<br>
+SELECT OrderID,CompanyName,FirstName + ' ' + LastName AS 'Employee',OrderDate,ShipName,ShipCity,ShipCountry FROM Orders<br>
+INNER JOIN Customers ON Customers.CustomerID = Orders.CustomerID<br>
+INNER JOIN Employees ON Employees.EmployeeID = Orders.EmployeeID<br><br>
+
