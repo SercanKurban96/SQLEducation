@@ -1229,3 +1229,31 @@ UPDATE TBLSTOK SET TOPLAMURUN-=@STOKSAYI<br><br>
 
 <hr>
 
+# 🖥️ Bölüm 18 - Transaction
+SQL'de Transaction (İşlem), bir veya daha fazla SQL sorgusunun tek bir işlem birimi olarak yürütülmesini sağlayan mekanizmadır. Eğer işlem başarılı bir şekilde tamamlanırsa COMMIT edilir, eğer herhangi bir hata oluşursa ROLLBACK ile önceki duruma geri döndürülür.<br><br>
+
+### ⚙️ Transaction Özellikleri (ACID)
+Bir Transaction, ACID (Atomicity, Consistency, Isolation, Durability) özelliklerine uymalıdır:<br><br>
+
+:one: <b>Atomicity (Bölünmezlik):</b> İşlem ya tamamen başarılı olur ya da tamamen iptal edilir.<br>
+:two: <b>Consistency (Tutarlılık):</b> İşlem tamamlandığında veri tabanı tutarlı bir durumda kalmalıdır.<br>
+:three: <b>Isolation (İzolasyon):</b> Bir Transaction, diğer Transaction'ları etkilememelidir.<br>
+:four: <b>Durability (Kalıcılık):</b> İşlem tamamlandığında, veriler kalıcı olarak saklanır.<br><br>
+
+### 📝 Transaction Kontrol Komutları
+BEGIN TRANSACTION → Transaction başlatır.<br>
+COMMIT → Transaction'ı tamamlar ve değişiklikleri kaydeder.<br>
+ROLLBACK → Transaction'ı iptal eder ve önceki duruma döndürür.<br>
+SAVEPOINT → Transaction içinde bir geri dönüş noktası oluşturur.<br><br>
+
+✅ Bu yapı özellikle bankacılık işlemleri, stok yönetimi, sipariş işlemleri gibi kritik veri değişikliklerinde kullanılabilir.<br><br>
+
+Örnek Kullanım:<br>
+BEGIN TRANSACTION<br>
+INSERT INTO TBLKATEGORI (AD) VALUES ('TV')<br>
+INSERT INTO TBLKATEGORI (AD) VALUES ('HALI')<br>
+SELECT * FROM TBLKATEGORI<br>
+ROLLBACK<br><br>
+
+Burada 2 tane daha kategori ekleme işlemi yaptık, ancak sorgunun sonuna ROLLBACK eklediğimiz için işlemi iptal etti. Sorgu sorunsuz çalışıyor gibi gözükse de aslında verilere baktığımız zaman bu iki veriyi eklemeyecektir.<br><br>
+
