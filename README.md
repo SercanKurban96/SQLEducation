@@ -1154,4 +1154,55 @@ Bu kez grafiklere veri çekme işlemi uyguluyoruz. Birinci grafiğe Kategorileri
 
 <hr>
 
+# 🖥️ Bölüm 17 - Trigger 2
+Trigger işlemlerine devam ediyoruz.<br><br>
 
+📍 Yeni veri tabanı oluşturuyoruz.<br>
+CREATE DATABASE DbYeni<br><br>
+
+📍 Tablolarımızı oluşturalım.<br>
+CREATE TABLE TBLMUSTERI<br>
+(<br>
+ID INT PRIMARY KEY IDENTITY(1,1),<br>
+AD VARCHAR(20),<br>
+SOYAD VARCHAR(20),<br>
+SEHIR VARCHAR(15),<br>
+BAKIYE DECIMAL(18,2)<br>
+)<br><br>
+
+CREATE TABLE TBLKATEGORI<br>
+(<br>
+KATEGORIID INT PRIMARY KEY IDENTITY(1,1),<br>
+AD VARCHAR(20)<br>
+)<br><br>
+
+CREATE TABLE TBLURUN<br>
+(<br>
+URUNID INT PRIMARY KEY IDENTITY(1,1),<br>
+AD VARCHAR(20),<br>
+ALISFIYAT DECIMAL(18,2),<br>
+SATISFIYAT DECIMAL(18,2),<br>
+STOK SMALLINT,<br>
+DURUM BIT,<br>
+KATEGORI INT<br>
+)<br><br>
+
+CREATE TABLE TBLSATIS<br>
+(<br>
+SATISID INT PRIMARY KEY IDENTITY(1,1),<br>
+MUSTERI INT,<br>
+URUN INT,<br>
+TARIH DATE<br>
+)<br><br>
+
+CREATE TABLE TBLSTOK<br>
+(<br>
+TOPLAMURUN INT<br>
+)<br><br>
+
+📍 Trigger Örneği: TBLURUN tablosuna her bir veri eklediğim zaman TBLSTOK değerini bir arttıran sorgu<br>
+CREATE TRIGGER ARTTIR<br>
+ON TBLURUN<br>
+AFTER INSERT<br>
+AS<br>
+UPDATE TBLSTOK SET TOPLAMURUN+=1<br>
