@@ -1205,4 +1205,27 @@ CREATE TRIGGER ARTTIR<br>
 ON TBLURUN<br>
 AFTER INSERT<br>
 AS<br>
-UPDATE TBLSTOK SET TOPLAMURUN+=1<br>
+UPDATE TBLSTOK SET TOPLAMURUN+=1<br><br>
+
+📍 Trigger Örneği: TBLURUN tablosunda yer alan STOK sayılarının toplamının üzerine ekleme işlemini Trigger üzerinde yapan sorgu<br>
+CREATE TRIGGER ARTTIR<br>
+ON TBLURUN<br>
+AFTER INSERT<br>
+AS<br>
+DECLARE @STOKSAYI INT<br>
+SELECT @STOKSAYI=STOK FROM inserted<br>
+UPDATE TBLSTOK SET TOPLAMURUN+=@STOKSAYI<br><br>
+
+Burada @STOKSAYI isminde bir değişken oluşturduk. Daha sonra @STOKSAYI değerini seçip TBLURUN tablosunda yer alan STOK'a atama işlemi yapıyoruz, inserted ifadesi ise üzerinde çalıştığım tabloda bulunan stok sayısı sütunundaki değeri @STOKSAYI değişkenine ata anlamına gelmektedir.<br><br>
+
+📍 Trigger Örneği: TBLURUN tablosunda yer alan STOK sayılarını bu kez silme işlemini Trigger üzerinde yapan sorgu<br>
+CREATE TRIGGER AZALT<br>
+ON TBLURUN<br>
+AFTER DELETE<br>
+AS<br>
+DECLARE @STOKSAYI INT<br>
+SELECT @STOKSAYI=STOK FROM deleted<br>
+UPDATE TBLSTOK SET TOPLAMURUN-=@STOKSAYI<br><br>
+
+<hr>
+
