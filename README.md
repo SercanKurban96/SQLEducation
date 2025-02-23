@@ -991,6 +991,7 @@ SELECT * FROM TBLURUNLER<br><br>
 # 🖥️ Bölüm 16 - C# ile SQL
 
 Bu bölümde artık C# ile SQL üzerinden proje oluşturuyoruz.<br><br>
+⚠️ <b>CSharpEducation adlı repomda yer alan Veri Tabanı SQL bölümünde daha önceden anlatıldığı için bu kısımda CRUD işlemleri hakkında fazla bilgi anlatılmamıştır!</b>
 
 ![image](https://github.com/user-attachments/assets/9be5711a-adaf-4817-be9a-d50ba806a973)
 <br>
