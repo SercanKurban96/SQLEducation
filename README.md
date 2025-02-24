@@ -1321,3 +1321,14 @@ END<br><br>
 
 📍 SELECT AD, STOK, DBO.STOKARTTIR(STOK) FROM TBLURUN<br><br>
 
+📍 Bu kez String türünde bir fonksiyon oluşturalım:<br><br>
+
+CREATE FUNCTION KUCUKHARF(@ISIM VARCHAR(20))<br>
+RETURNS VARCHAR(20)<br>
+AS<br>
+BEGIN<br>
+RETURN LOWER(@ISIM)<br>
+END<br><br>
+
+SELECT DBO.KUCUKHARF(AD),STOK FROM TBLURUN<br><br>
+
