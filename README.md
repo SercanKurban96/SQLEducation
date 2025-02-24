@@ -1297,7 +1297,13 @@ Buradaki fonksiyonlar String Functions klasöründe yer alan fonksiyonlardır.<b
 
 📍 <b>Örnek:</b> SELECT LEN(AD), AD FROM TBLURUN<br><br>
 
-Şimdi burada kendimiz bir fonksiyon oluşturacağız.<br><br>
+### ⚙️ SQL'de Kullanıcı Tanımlı Fonksiyonlar (UDF)
+SQL Server'da fonksiyonlar geri dönüş değerine göre ikiye ayrılır:<br>
+
+:one: Scalar (Tekil) Fonksiyonlar → Tek bir değer döndürür.<br>
+:two: Table-Valued Fonksiyonlar → Bir tablo döndürür.<br><br>
+
+Şimdi burada ilk olarak Scalar (Tekil) Fonksiyon oluşturacağız.<br><br>
 
 <b>Örnek Fonksiyon Oluşturma:</b> Mevcut stokların üzerine örneğin 26 stok daha ekleyen sorgu.<br>
 CREATE FUNCTION STOKARTTIR(@ADET INT)<br>
@@ -1340,3 +1346,20 @@ BEGIN<br>
 RETURN @FIYAT*1.18<br>
 END<br>
 SELECT AD,SATISFIYAT,DBO.KDV(SATISFIYAT) AS 'KDVLİ HALİ' FROM TBLURUN<br><br>
+
+Şimdi burada Table-Valued Fonksiyon oluşturacağız.<br><br>
+
+CREATE FUNCTION URUNBILGI(@URID INT)<br>
+RETURNS TABLE<br>
+AS<br>
+RETURN SELECT * FROM TBLURUN WHERE URUNID=@URID<br><br>
+
+![image](https://github.com/user-attachments/assets/e336310b-8c7b-41d8-a5b6-8d26c3adaa33)
+<br>
+Sorguyu çalıştırdıktan sonra bu kez Functions klasörüne gittiğimiz zaman Table-valued Functions klasöründe yer almaktadır.<br><br>
+
+SELECT * FROM DBO.URUNBILGI(4)<br>
+Buradaki ifadeyi çalıştırdığımız zaman 4 numaralı ID olan kaydı getirecektir.<br><br>
+
+<hr>
+
