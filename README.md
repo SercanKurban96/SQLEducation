@@ -1265,3 +1265,59 @@ SELECT * FROM TBLURUN<br>
 COMMIT<br><br>
 
 Burada 2 tane daha ürün ekleme işlemi yaptık, sorgunun sonuna COMMIT eklediğimiz için ekleme işlemini gerçekleştirecektir. <br><br>
+
+<hr>
+
+# 🖥️ Bölüm 19 - Fonksiyonlar
+SQL fonksiyonları, verileri işlemek, manipüle etmek ve analiz etmek için kullanılan hazır komutlardır. SQL'de fonksiyonlar birleşik fonksiyonlar (aggregate functions) ve satır bazlı fonksiyonlar (scalar functions) olarak ikiye ayrılır.<br><br>
+
+### 📝 1. Birleşik Fonksiyonlar (Aggregate Functions)
+Bu fonksiyonlar, birden fazla satır üzerinde işlem yaparak tek bir değer döndürür.<br><br>
+
+![image](https://github.com/user-attachments/assets/c86dc995-cc9f-49d1-befa-0e15a10bebae)
+
+Birleşik fonksiyonları görmek için ilgili veri tabanımızda yer alan Programmability klasöründe yer alan Functions klasörüne geliyoruz. Ardından 4 tane daha klasör karşımıza çıkmaktadır. En altta yer alan System Functions klasörüne geliyoruz, ardından Aggregate Functions klasörüne tıklayarak buradaki tüm birleşik fonksiyonları görebiliriz.<br><br>
+
+📍 <b>Örnek:</b> SELECT COUNT(*) FROM TBLURUN<br><br>
+
+### 📝 2. Matematiksel Fonksiyonlar
+
+![image](https://github.com/user-attachments/assets/d4fa3a90-a94b-4486-b63b-2ff68aea6257)
+<br>
+Buradaki matematiksel fonksiyonları görmek için bu kez Mathematical Functions klasörüne tıklayarak buradaki tüm matematiksel fonksiyonları görebiliriz.<br><br>
+
+📍 <b>Örnek:</b> SELECT SQRT(STOK) FROM TBLURUN<br><br>
+
+### 📝 3. Satır Bazlı Fonksiyonlar (Scalar Functions)
+Bu fonksiyonlar her satır için işlem yapar ve tek bir değer döndürür.<br><br>
+
+![image](https://github.com/user-attachments/assets/a54529c3-41a4-44de-a132-787c28b18617)
+<br>
+Buradaki fonksiyonlar String Functions klasöründe yer alan fonksiyonlardır.<br><br>
+
+📍 <b>Örnek:</b> SELECT LEN(AD), AD FROM TBLURUN<br><br>
+
+Şimdi burada kendimiz bir fonksiyon oluşturacağız.<br><br>
+
+<b>Örnek Fonksiyon Oluşturma:</b> Mevcut stokların üzerine örneğin 26 stok daha ekleyen sorgu.<br>
+CREATE FUNCTION STOKARTTIR(@ADET INT)<br>
+RETURNS INT<br>
+AS<br>
+BEGIN<br>
+RETURN @ADET+26<br>
+END<br><br>
+
+### 📌 Açıklamalar:
+🔹 Burada ilk olarak CREATE FUNCTION şeklinde bir fonksiyon oluşturuyoruz ve ismini STOKARTTIR olarak belirliyoruz. Parantez içerisinde parametrelerin tanımlanması gerekmektedir. Burada @ADET isminde bir değişken tanımlayıp INT tipinde belirliyoruz.<br>
+🔹 Fonksiyon tanımlarken bu fonksiyonun geriye dönüş tipi olması gerekmektedir. Burada RETURNS ifadesini kullanıyoruz. @ADET değerini INT olarak belirlediğimiz için bize geriye INT değeri döndürecektir.<br>
+🔹 Ardından AS ve BEGIN komutlarını yazıyoruz.<br>
+🔹 İşlemimizi RETURN @ADET+26 olarak belirliyoruz ve END ile bitiriyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/f852535a-69cf-4f15-966b-beab9e5ed844)
+<br>
+✅ Oluşturduğumuz fonksiyon, Functions klasörüne geldiğimiz zaman Scalar-valued Functions klasöründe yer almaktadır.<br><br>
+
+‼️ Fonksiyonu çağırmak için başına DBO.FonksiyonAdı(Burada FonksiyonAdı tanımlarken parantez içerisinde bir parametre gönderecek formatta tanımladığımız sütun adı) yazılmalıdır.<br><br>
+
+📍 SELECT AD, STOK, DBO.STOKARTTIR(STOK) FROM TBLURUN<br><br>
+
