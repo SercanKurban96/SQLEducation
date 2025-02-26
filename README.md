@@ -1475,4 +1475,84 @@ Logical reads bu kez sadece 3 sayfayı okudu, böylece işlemi daha kısa süred
 
 <hr>
 
+# 🖥️ Bölüm 21 - Yedek Alma İşlemleri
+SQL Server'da veritabanı yedeği almak için üç farklı yöntem vardır:<br><br>
 
+## :one: <b>Backup Dosyası (BAK) ile Yedek Alma</b><br>
+Bu yöntem, SQL Server’ın sunduğu en güvenilir yedekleme yöntemidir.<br><br>
+
+Burada örnek olarak DbYeni adlı veri tabanımızdan Back Up Dosyası ile yedeğini alıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/aa5f263c-15de-4e0e-bfb1-cd4c652667e8)
+
+DbYeni veri tabanımıza sağ tıklayıp Tasks kısmından Back Up olanı seçiyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/17234e10-404a-426f-a00c-f92989d333a7)
+<br>
+Karşımıza bu şekilde çıkmaktadır. Burada yedeğin alınacağı konum seçilebilir. Eğer konum kısmında herhangi bir değişiklik yapmazsak varsayılan değer olarak C sürücüsündeki SQL'in kurulu olduğu dizindeki Backup klasörü içinde kaydolacaktır. Burada herhangi bir değişiklik yapmıyoruz ve direkt OK diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/c03c4cdb-2f85-4af6-b8d7-9bab1c6f9ff3)
+<br>
+OK dedikten sonra karşımıza bu şekilde çıkacaktır. Back up ile yedek alma işlemi bu şekildedir. Dosyalar .bak uzantıyla kaydedilir.<br><br>
+
+:warning: Back up dosyalarımıza erişmek için:<br><br>
+C: --> Program Files --> Microsoft SQL Server<br><br>
+
+![image](https://github.com/user-attachments/assets/264e13bd-0041-43f2-9976-d8ed38615b58)
+<br>
+Microsoft SQL Server klasörüne geldikten sonra buradaki klasörler sizde farklılık gösterebilir. Backup dosyalarına erişmek için bu pencerede yer alan klasörlerden en alttaki olanına tıklıyoruz. Ardından MSSQL klasörü karşınıza çıkacaktır. Tıklamaya devam ediyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/bb71ea7f-ab6d-4ba7-a955-0d1273a2cc14)
+<br>
+Ardından en üstte yer alan Backup klasörüne giriyoruz. Eğer ilk defa giriyorsanız burada size bir uyarı verecektir. Devam diyerek klasöre erişebilirsiniz.<br><br>
+
+![image](https://github.com/user-attachments/assets/cd2d7218-f2d0-4810-b50e-1337fe7aed19)
+<br>
+Veri tabanının yedeklerini burada görebilirsiniz.<br><br>
+
+❓ Peki Backup dosyasını tekrar veri tabanının içine nasıl Restore (dahil) edebiliriz?<br><br>
+
+![image](https://github.com/user-attachments/assets/4cdab87e-8184-4d9f-b7ce-ba3051781f59)
+<br>
+Örneğin az önce yedekleme yaptığımız DbYeni veri tabanımızı silelim.<br><br>
+
+![image](https://github.com/user-attachments/assets/cfcb14ea-e113-4324-b074-a27a8399dbdb)
+<br>
+Databases klasörüne sağ tıklayıp Restore Database diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/24932c96-6395-4ee3-8a93-9fb581b50b63)
+<br>
+Karşımıza bu şekilde çıkmaktadır. Buradan en üstte yer alan Database seçili halde gelecektir.<br><br>
+
+![image](https://github.com/user-attachments/assets/fe68a167-8fc8-444b-b76e-dcd0ab8a11f3)
+<br>
+Buradan "<b>Device</b>" olanı seçiyoruz ve yanındaki üç noktaya tıklıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/f99a16b2-36e8-4efa-8c9b-85476ffdc175)
+<br>
+Karşımıza bu şekilde çıkacaktır. Sağda bulunan Add seçeneğine tıklıyoruz<br><br>
+
+![image](https://github.com/user-attachments/assets/6afff728-303d-46a9-8f71-a8e3dbb4d044)
+<br>
+Burada daha önceden back up ile yedeklediğim veri tabanlarını içermektedir. Buradan DbYeni olanı seçiyoruz ve OK diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/2ac7666c-3a53-4bef-9a56-3e06eccb532a)
+<br>
+Tekrardan OK dedikten sonra karşımıza bu şekilde çıkmaktadır. Bir kez daha OK diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/c6134b81-831d-4db2-84d5-1a94133d748e)
+<br>
+Veri tabanımız tekrardan Restore edilmiştir.<br><br>
+
+![image](https://github.com/user-attachments/assets/6066bcb0-a79d-421d-be66-b130ea2df3e3)
+<br>
+DbYeni veri tabanımız bu şekilde yeniden eklenmiştir.<br><br>
+
+## :two: <b>Script (SQL DDL + DML) ile Yedek Alma</b><br>
+Eğer .bak dosyası yerine, veritabanını SQL komutlarıyla yeniden oluşturmak isterseniz, SQL Server Management Studio (SSMS) kullanabilirsiniz.<br><br>
+
+
+
+
+## :three: <b>Transaction Log (LOG) ile Yedek Alma</b><br>
+Eğer yalnızca yapılan işlemleri kaydetmek ve gerektiğinde geri döndürmek istiyorsanız, Transaction Log yedeği alabilirsiniz.<br><br>
