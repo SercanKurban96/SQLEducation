@@ -1551,7 +1551,55 @@ DbYeni veri tabanımız bu şekilde yeniden eklenmiştir.<br><br>
 ## :two: <b>Script (SQL DDL + DML) ile Yedek Alma</b><br>
 Eğer .bak dosyası yerine, veritabanını SQL komutlarıyla yeniden oluşturmak isterseniz, SQL Server Management Studio (SSMS) kullanabilirsiniz.<br><br>
 
+Tekrardan DbYeni üzerinden gidelim.<br><br>
 
+![image](https://github.com/user-attachments/assets/a7200e8d-7e96-4078-a536-de794dc58dd1)
+<br>
+DbYeni veri tabanımıza sağ tıklayıp Tasks kısmından bu kez Generate Scripts seçiyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/3d3a2a7d-3a17-4086-accd-901f7cd590b7)
+<br>
+Karşımıza bu şekilde çıkmaktadır. Buradan herhangi bir ayarı değiştirmeden Next diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/79c8f0c4-9a04-40c4-bf90-b347caa57436)
+<br>
+Karşımıza bu şekilde çıkmaktadır. <br><br>
+
+![image](https://github.com/user-attachments/assets/816a78e9-0145-465b-bc5b-ca40be4b655a)
+<br>
+Burada başlangıçta "Script entire database and all database objects" seçili halde çıkacaktır. Biz bunun yerine bir alttaki seçenek olan "Select specific database objects" olana tıklıyoruz. Bu seçeneği seçtikten sonra alttaki kutucuklar aktif hale gelecektir. Buradan sadece Tables seçeneğini seçmek bizim için yeterli olacaktır. Next diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/1e720671-0053-44b9-a137-d97284aa1be9)
+<br>
+Karşımıza bu şekilde çıkmaktadır. Bizim için en önemli kısım burası olacaktır. Sağ tarafta yer alan "<b>Advanced</b>" butonuna tıklıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/edded0e6-61eb-4b21-8357-f11524249380)
+<br>
+Buradan Types of data to script olanı buluyoruz. Burada bize başlangıçta Schema only olarak belirtmektedir. Eğer sadece Schema only seçersek tabloların Design kısmını almış oluruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/1fc797f4-9bbe-43f3-b62b-6b9b680d6687)
+<br>
+Buradan Schema and data olanı seçiyoruz ve OK diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/3dbb749b-3885-444a-b3ae-4961a521a575)
+<br>
+Ardından solda bulunan Save as script file olanı işaretliyoruz ve scriptimizin kaydolacağı yeri seçmemiz için sağda bulunan üç nokta olan butona tıklıyoruz. Buradan isterseniz yeni bir klasör açıp Scriptler diye kaydedebilir ve tüm scriptleri bu klasörün içine atabilirsiniz. Ardından Next diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/7eba5168-675c-4bed-b0de-5efa5d5991ec)
+<br>
+Karşımıza bu şekilde çıkmaktadır. Burada herhangi bir değişiklik yapmadan Next diyoruz ve biraz bekliyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/c37d0f10-8623-4b66-a429-754341879775)
+<br>
+Bekleme işlemi bittikten sonra script dosyasında herhangi bir sıkıntı olmazsa bu şekilde sorunsuz bir şekilde kaydedecektir. Finish diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/24fe0b7b-7e12-4960-8c02-37fe245c378a)
+<br>
+Yedeklediğimiz script dosyasını açıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/b2f2a2a5-471d-462a-8f24-b78403a5b4d5)
+<br>
+Yedeklediğimiz script dosyası bu şekilde oluşturuldu. Script ile yedek alma işlemi bu şekildedir.<br><br>
 
 
 ## :three: <b>Transaction Log (LOG) ile Yedek Alma</b><br>
