@@ -1429,3 +1429,39 @@ SELECT 'Kitap' + CAST(@SAYAC AS VARCHAR(20))<br>
 SET @SAYAC=@SAYAC+1<br>
 END<br><br>
 
+250.000 veri ekleme işlemini yaptık. Peki 210.000 veriyi nasıl sorgularız?<br>
+SQL Server'da sorguların performans analizini yapmak için kullanılan iki önemli komut vardır:<br><br>
+
+:one: <b>SET STATISTICS IO ON</b><br><br>
+🔹 Girdi/Çıktı (I/O) istatistiklerini gösterir.<br>
+🔹 Bir sorgunun kaç sayfa okuduğunu, yazdığını ve kaç kez okuma/yazma yaptığı gibi disk üzerindeki I/O işlemlerini raporlar.<br>
+🔹 Özellikle indeks kullanımı, tablo taramaları (Table Scan), indeks taramaları (Index Scan) ve indeks aramaları (Index Seek) gibi performans detaylarını anlamak için kullanılır.<br><br>
+
+:two: <b>SET STATISTICS TIME ON</b><br><br>
+🔹 Sorgunun çalışma süresi hakkında bilgi verir.<br>
+🔹 Sorgunun CPU süresi (işlemci süresi) ve toplam geçen süre (elapsed time) değerlerini raporlar.<br>
+🔹 Hangi sorguların daha verimli çalıştığını anlamak için kullanılır.<br><br>
+
+📍 Kullanımı şu şekildedir:<br><br>
+
+SET STATISTICS IO ON<br>
+SET STATISTICS TIME ON<br>
+SELECT * FROM TABLO1 WHERE ID=210387<br><br>
+
+![image](https://github.com/user-attachments/assets/b9cb8adf-0807-4e61-94ef-7bb1ca669be0)
+<br>
+Sorguyu çalıştırdıktan sonra Results kısmında çıktı bu şekilde görüntülenecektir, ancak sıralama hakkında daha detaylı bir şekilde görmek için Messages kısmına tıklıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/db09d85a-ab1c-4275-be26-93299cf1046c)
+<br>
+Burada Table TABLO1'de Scan count (aranan öğe sayısı) 1, logical reads 895 kısmı ise bu 210.387 numaralı ID'ye ulaşana kadar okuduğu sayfa sayısıdır.<br>
+⚠️ Bu yöntem pek kullanışlı bir yöntem değildir, bunun yerine Index kullanacağız.<br>>br>
+
+
+
+
+
+### ⚠️ Dikkat Edilmesi Gerekenler
+✅ Fazla indeks kullanımı performansı düşürebilir, çünkü her INSERT, UPDATE ve DELETE işleminde indekslerin güncellenmesi gerekir.<br>
+✅ Sadece sık kullanılan ve büyük tablolardaki sütunlara indeks eklenmelidir.<br>
+✅ Veri okuma işlemlerini hızlandırırken, yazma işlemlerinde ekstra yük getirebilir.<br>
