@@ -1455,13 +1455,24 @@ Sorguyu çalıştırdıktan sonra Results kısmında çıktı bu şekilde görü
 ![image](https://github.com/user-attachments/assets/db09d85a-ab1c-4275-be26-93299cf1046c)
 <br>
 Burada Table TABLO1'de Scan count (aranan öğe sayısı) 1, logical reads 895 kısmı ise bu 210.387 numaralı ID'ye ulaşana kadar okuduğu sayfa sayısıdır.<br>
-⚠️ Bu yöntem pek kullanışlı bir yöntem değildir, bunun yerine Index kullanacağız.<br>>br>
+⚠️ Bu yöntem pek kullanışlı bir yöntem değildir, bunun yerine Clustered Index kullanacağız.<br><br>
 
+📍 Clustered Index Kullanımı:<br>
+CREATE CLUSTERED INDEX TABLOKAYITGETIR<br>
+ON TABLO1(ID)<br><br>
+Sorguyu çalıştırdıktan sonra tekrardan 210.387'nci kaydımızı çağırıyoruz.<br>
+SELECT * FROM TABLO1 WHERE ID=210387<br><br>
 
+![image](https://github.com/user-attachments/assets/62500096-a921-4e9f-a385-6243ee0739d1)
+<br>
 
-
+Logical reads bu kez sadece 3 sayfayı okudu, böylece işlemi daha kısa sürede halletmiş oldu.<br><br>
 
 ### ⚠️ Dikkat Edilmesi Gerekenler
 ✅ Fazla indeks kullanımı performansı düşürebilir, çünkü her INSERT, UPDATE ve DELETE işleminde indekslerin güncellenmesi gerekir.<br>
 ✅ Sadece sık kullanılan ve büyük tablolardaki sütunlara indeks eklenmelidir.<br>
-✅ Veri okuma işlemlerini hızlandırırken, yazma işlemlerinde ekstra yük getirebilir.<br>
+✅ Veri okuma işlemlerini hızlandırırken, yazma işlemlerinde ekstra yük getirebilir.<br><br>
+
+<hr>
+
+
