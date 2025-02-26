@@ -1413,3 +1413,19 @@ Artık Non-Clustered Index işlemimiz hazır. OK diyoruz.<br><br>
 <br>
 Non-Clustered Index hazır.<br><br>
 
+📍 Burada bir tane tablo oluşturup 250.000 tane veri ekliyoruz.<br><br>
+CREATE TABLE TABLO1<br>
+(<br>
+ID INT IDENTITY(1,1),<br>
+AD VARCHAR(20)<br>
+)<br><br>
+
+📍 250.000 veri ekleme işlemi:<br><br>
+DECLARE @SAYAC INT=1<br>
+WHILE @SAYAC<250001<br>
+BEGIN<br>
+INSERT TABLO1<br>
+SELECT 'Kitap' + CAST(@SAYAC AS VARCHAR(20))<br>
+SET @SAYAC=@SAYAC+1<br>
+END<br><br>
+
