@@ -1363,3 +1363,53 @@ Buradaki ifadeyi çalıştırdığımız zaman 4 numaralı ID olan kaydı getire
 
 <hr>
 
+# 🖥️ Bölüm 20 - Index
+SQL'de Index (Dizin), veritabanındaki tablo sütunları üzerinde oluşturulan ve sorguların performansını artırmaya yardımcı olan bir veri yapısıdır. İndeksler, belirli sütunlarda arama, sıralama ve filtreleme işlemlerini hızlandırmak için kullanılır.<br><br>
+
+## 📌 Index'in Amacı ve Avantajları
+🔹 Hızlı Veri Erişimi: WHERE, JOIN, ORDER BY ve GROUP BY gibi sorguların daha hızlı çalışmasını sağlar.<br>
+🔹 Daha Az Okuma İşlemi: Veritabanı, ilgili satırları daha az disk okuma işlemiyle bulabilir.<br>
+🔹 Sorgu Performansını Artırır: Büyük veritabanlarında indekslenmiş sütunlara yapılan sorgular çok daha hızlı çalışır.<br><br>
+
+### 📝 Index Türleri
+<b>:one: Primary Key (Birincil Anahtar) Index</b><br>
+PRIMARY KEY kısıtlaması ile otomatik olarak oluşturulur.<br>
+Benzersiz ve NULL değer içeremez.<br><br>
+
+<b>:two: Unique (Benzersiz) Index</b><br>
+Tekrarlayan değerlerin bulunmasını engeller.<br>
+UNIQUE kısıtlamasıyla aynı mantıkta çalışır.<br><br>
+
+<b>:three: Clustered (Kümelenmiş) Index</b><br>
+Verileri fiziksel olarak sıralar.<br>
+Bir tabloda yalnızca bir tane olabilir.<br>
+Primary Key varsa otomatik olarak oluşur.<br><br>
+
+<b>:four: Non-Clustered (Kümelenmemiş) Index</b><br>
+Veriyi fiziksel olarak sıralamaz, sadece gösterge (pointer) tutar.<br>
+Bir tabloda birden fazla olabilir.<br>
+Özellikle sık kullanılan sütunlara eklenir.<br><br>
+
+<b>:five: Full-Text Index (Tam Metin İndeksi)</b><br>
+Büyük metin verilerinde hızlı arama yapılmasını sağlar.<br><br>
+
+📍 Şimdi burada bir tane Non-Clustered Index oluşturacağız.<br><br>
+
+Kullanacağımız veri tabanı olan DbYeni veri tabanında yer alan Tables klasörüne geliyoruz. Burada TBLURUN üzerinde çalışacağız. TBLURUN tablosundan Indexes adlı klasörümüze sağ tıklayarak "New Index", ardından "Non-Clustered Index" olanı seçiyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/a52291b9-e996-430b-a87b-046a9add169f)
+<br>
+Karşımıza bu şekilde çıkacaktır. Sağ tarafta yer alan Add butonuna tıklıyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/0d5321f1-7b55-48e7-aeb1-19011660a155)
+<br>
+Burada URUNID ve AD olan sütunları seçiyoruz ve OK diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/3560096d-529f-43f3-a0d5-434c047a252c)
+<br>
+Artık Non-Clustered Index işlemimiz hazır. OK diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/0ddb070e-0226-4a2e-ab32-2fdad4ebbbcc)
+<br>
+Non-Clustered Index hazır.<br><br>
+
