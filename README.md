@@ -1618,3 +1618,29 @@ Burada kullanmış olduğumuz bütün veri tabanlarının LOG dosyaları mevcutt
 DbYeni veri tabanı üzerinden devam edelim. Bu iki dosyayı kopyalıyoruz. Ardından istediğiniz herhangi bir klasöre yapıştırıyoruz.<br>
 <strong>:warning: Eğer yapıştırma işleminde hata alıyorsanız Hizmetler bölümünde SQL'in çalışıyor olmasıdır.</strong><br><br>
 
+![image](https://github.com/user-attachments/assets/41163fa7-927c-4e29-8342-cf0f28eb26f7)
+<br>
+Windows arama çubuğuna Hizmetler diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/86d92a2c-a078-493d-b29d-e818e73f4e43)
+<br>
+Buradan kullanmış olduğunuz SQL Server (MSSQL sürümü)'nü bulup sağ tıklayarak Durdur diyoruz.<br><br>
+
+✅ Ardından tekrar LOG dosyalarını kopyalayıp istediğiniz yere yapıştırabilirsiniz. Ardından tekrar Hizmetler kısmında yer alan SQL Server sürümünüzü başlatmanız gerekmektedir.<br><br>
+
+Başka makineden alınan LOG yedeklerini kendi makinemize kurmak için yapacağımız adımlar şu şekildedir:<br><br>
+
+![image](https://github.com/user-attachments/assets/6d362229-5321-4c68-a5f8-2dbb3b12ba6d)
+<br>
+Databases klasörüne sağ tıklayıp Attach diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/361aaaf8-41a3-490a-b0ca-9372dcd60044)
+<br>
+Karşımıza bu şekilde çıkacaktır. Add diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/9de76381-287d-46e7-b623-83dcbb706229)
+<br>
+Buradan çalışacağınız veri tabanını seçip OK diyorsunuz. LOG ile yedek alma işlemi bu şekildedir.<br><br>
+
+<hr>
+
