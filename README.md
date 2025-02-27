@@ -1504,7 +1504,7 @@ Microsoft SQL Server klasörüne geldikten sonra buradaki klasörler sizde farkl
 
 ![image](https://github.com/user-attachments/assets/bb71ea7f-ab6d-4ba7-a955-0d1273a2cc14)
 <br>
-Ardından en üstte yer alan Backup klasörüne giriyoruz. Eğer ilk defa giriyorsanız burada size bir uyarı verecektir. Devam diyerek klasöre erişebilirsiniz.<br><br>
+Ardından en üstte yer alan Backup klasörüne giriyoruz. Eğer ilk defa giriyorsanız "Şu an bu klasöre erişim izniniz yok." uyarısı çıkacaktır. Devam diyerek klasöre erişebilirsiniz.<br><br>
 
 ![image](https://github.com/user-attachments/assets/cd2d7218-f2d0-4810-b50e-1337fe7aed19)
 <br>
@@ -1604,3 +1604,17 @@ Yedeklediğimiz script dosyası bu şekilde oluşturuldu. Script ile yedek alma 
 
 ## :three: <b>Transaction Log (LOG) ile Yedek Alma</b><br>
 Eğer yalnızca yapılan işlemleri kaydetmek ve gerektiğinde geri döndürmek istiyorsanız, Transaction Log yedeği alabilirsiniz.<br><br>
+
+![image](https://github.com/user-attachments/assets/bb71ea7f-ab6d-4ba7-a955-0d1273a2cc14)
+<br>
+Back up yedekleme işleminde dosyalar Backup klasöründe yer almaktaydı. Burada yapacağımız LOG yedekleme işleminde ise DATA klasöründen yapacağız. Aynı şekilde "Şu an bu klasöre erişim izniniz yok." uyarısı çıkacaktır. Devam diyoruz.<br><br>
+
+![image](https://github.com/user-attachments/assets/cd93628f-0cd3-44c3-a290-ffc3be7dbffc)
+<br>
+Burada kullanmış olduğumuz bütün veri tabanlarının LOG dosyaları mevcuttur.<br><br>
+
+![image](https://github.com/user-attachments/assets/9529b331-3370-4437-b025-c14975bb416d)
+<br>
+DbYeni veri tabanı üzerinden devam edelim. Bu iki dosyayı kopyalıyoruz. Ardından istediğiniz herhangi bir klasöre yapıştırıyoruz.<br>
+<strong>:warning: Eğer yapıştırma işleminde hata alıyorsanız Hizmetler bölümünde SQL'in çalışıyor olmasıdır.</strong><br><br>
+
