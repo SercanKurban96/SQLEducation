@@ -1644,3 +1644,24 @@ Buradan çalışacağınız veri tabanını seçip OK diyorsunuz. LOG ile yedek 
 
 <hr>
 
+# 🖥️ Bölüm 22 - Job
+SQL Job, SQL Server Agent tarafından yönetilen ve belirli bir zamanda otomatik olarak çalıştırılabilen görevlerdir. SQL Server Agent, SQL Server ile birlikte gelen bir hizmettir ve veritabanı yöneticilerinin rutin görevleri otomatikleştirmesine olanak tanır.<br><br>
+
+:warning: <strong>SQL Express sürümünde SQL Server Agent bulunmamaktadır!</strong>
+
+## 📌 SQL Job Kullanım Amaçları
+SQL Job'lar genellikle aşağıdaki işlemleri otomatikleştirmek için kullanılır:<br><br>
+✅ <b>Yedekleme İşlemleri:</b> Veritabanlarının belirli aralıklarla otomatik yedeğinin alınması.<br>
+✅ <b>Bakım İşlemleri:</b> İndekslerin yeniden oluşturulması, istatistiklerin güncellenmesi.<br>
+✅ <b>ETL Süreçleri:</b> Farklı veritabanları veya sistemler arasında veri aktarımı (Extract, Transform, Load işlemleri).<br>
+✅ <b>Raporlama:</b> Belirli zamanlarda raporların oluşturulup e-posta ile gönderilmesi.<br>
+✅ <b>Veri Temizleme:</b> Geçici veya eski kayıtların belirli zamanlarda temizlenmesi.<br><br>
+
+## ⚙️ SQL Job Nasıl Oluşturulur?
+1️⃣ SQL Server Management Studio (SSMS) açılır.<br>
+2️⃣ SQL Server Agent altında Jobs sekmesine sağ tıklanır ve New Job… seçeneği seçilir.<br>
+3️⃣ General sekmesinde işin adı ve açıklaması girilir.<br>
+4️⃣ Steps sekmesinde, SQL komutları veya saklı prosedürler eklenir.<br>
+5️⃣ Schedules sekmesinde, çalıştırma zamanı ve sıklığı belirlenir.<br>
+6️⃣ Alerts ve Notifications sekmelerinde, hata durumunda bildirim alınması ayarlanabilir.<br>
+7️⃣ Kaydedilip çalıştırıldığında, belirlenen zamanlarda otomatik olarak yürütülür.<br><br>
